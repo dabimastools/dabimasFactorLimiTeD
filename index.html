@@ -43,15 +43,19 @@
           <tbody v-if="$vuetify.breakpoint.mdAndUp">
             <tr>
               <th rowspan="3" class="f00_nitro_space"></th>
-              <th rowspan="3" class="f00_nitro"><span>ニトロ</span></th>
-              <th colspan="10" class="f00_nitro_header"></th>
+              <th width="1%" rowspan="3" class="f00_nitro">
+                <span>ニトロ</span>
+              </th>
+              <th colspan="12" class="f00_nitro_header"></th>
               <th rowspan="3" class="f00_inbreed_space"></th>
-              <th rowspan="3" class="f00_inbreed"><span>クロス</span></th>
-              <th colspan="10" class="f00_inbreed_header"></th>
+              <th width="1%" rowspan="3" class="f00_inbreed" @click="handleClick()">
+                <span>クロス</span>
+              </th>
+              <th colspan="12" class="f00_inbreed_header"></th>
               <th rowspan="2" class="table_footer_TH_theory">理論</th>
               <th
                 rowspan="3"
-                width="5%"
+                width="3%"
                 @click="initializer()"
                 style="background-color: #aa0000"
               >
@@ -59,6 +63,18 @@
               </th>
             </tr>
             <tr class="f00">
+              <th width="1%" class="f01">短</th>
+              <th class="f02">速</th>
+              <th class="f03">底</th>
+              <th class="f04">長</th>
+              <th class="f05">砂</th>
+              <th class="f06">丈</th>
+              <th class="f07">早</th>
+              <th class="f08">晩</th>
+              <th class="f09">堅</th>
+              <th class="f10">難</th>
+              <th class="f11">走</th>
+              <th class="f12">中</th>
               <th class="f01">短</th>
               <th class="f02">速</th>
               <th class="f03">底</th>
@@ -69,16 +85,8 @@
               <th class="f08">晩</th>
               <th class="f09">堅</th>
               <th class="f10">難</th>
-              <th class="f01">短</th>
-              <th class="f02">速</th>
-              <th class="f03">底</th>
-              <th class="f04">長</th>
-              <th class="f05">砂</th>
-              <th class="f06">丈</th>
-              <th class="f07">早</th>
-              <th class="f08">晩</th>
-              <th class="f09">堅</th>
-              <th class="f10">難</th>
+              <th class="f11">走</th>
+              <th class="f12">中</th>
             </tr>
             <tr>
               <th class="factorNumCell">{{factorNumtoString[0]}}</th>
@@ -91,6 +99,8 @@
               <th class="factorNumCell">{{factorNumtoString[7]}}</th>
               <th class="factorNumCell">{{factorNumtoString[8]}}</th>
               <th class="factorNumCell">{{factorNumtoString[9]}}</th>
+              <th class="factorNumCell">{{factorNumtoString[10]}}</th>
+              <th class="factorNumCell">{{factorNumtoString[11]}}</th>
               <th class="factorNumCell">{{inbreedFactorNumtoString[0]}}</th>
               <th class="factorNumCell">{{inbreedFactorNumtoString[1]}}</th>
               <th class="factorNumCell">{{inbreedFactorNumtoString[2]}}</th>
@@ -101,19 +111,27 @@
               <th class="factorNumCell">{{inbreedFactorNumtoString[7]}}</th>
               <th class="factorNumCell">{{inbreedFactorNumtoString[8]}}</th>
               <th class="factorNumCell">{{inbreedFactorNumtoString[9]}}</th>
+              <th class="factorNumCell">{{inbreedFactorNumtoString[10]}}</th>
+              <th class="factorNumCell">{{inbreedFactorNumtoString[11]}}</th>
               <th :class="styleThoeryClass"></th>
             </tr>
           </tbody>
 
           <tbody v-if="$vuetify.breakpoint.smAndDown">
-            <tr>
+            <!-- <tr>
               <th rowspan="3" class="f00_nitro_space"></th>
-              <th rowspan="3" class="f00_nitro"><span>ニトロ</span></th>
+              <th rowspan="3" class="f00_nitro">
+                <span>ニトロ</span>
+              </th>
               <th colspan="7" class="f00_nitro_header"></th>
               <th rowspan="3" class="f00_inbreed_space"></th>
-              <th rowspan="3" class="f00_inbreed"><span>クロス</span></th>
+              <th rowspan="3" class="f00_inbreed" @click="handleClick()">
+                <span>クロス</span>
+              </th>
               <th colspan="7" class="f00_inbreed_header"></th>
+
               <th rowspan="2" class="table_footer_TH_theory">理論</th>
+
               <th
                 rowspan="3"
                 width="9%"
@@ -155,7 +173,119 @@
               <th class="factorNumCell">{{inbreedFactorNumtoString[8]}}</th>
               <th class="factorNumCell">{{inbreedFactorNumtoString[9]}}</th>
               <th :class="styleThoeryClass"></th>
+            </tr> -->
+            <tr>
+              <td width="1%"></td>
+              <td width="13%"></td>
+              <td class="f01">短</td>
+              <td class="f02">速</td>
+              <td class="f03">底</td>
+              <td class="f04">長</td>
+              <td class="f05">ダ</td>
+              <td class="f06">丈</td>
+              <td class="f07">早</td>
+              <td class="f08">晩</td>
+              <td class="f09">堅</td>
+              <td class="f10">難</td>
+              <td class="f11">走</td>
+              <td class="f12">中</td>
+              <td class="f00_theory">理論</td>
             </tr>
+            <tr>
+              <td colspan="14" class="f00_nitro_header"></td>
+              <td rowspan="2" :class="styleThoeryClass" align="center"></td>
+            </tr>
+		        <tr>
+			        <td class="f00_nitro" colspan="2">ニトロ</td>
+              <td class="factorNumCell">{{factorNumtoString[0]}}</td>
+              <td class="factorNumCell">{{factorNumtoString[1]}}</td>
+              <td class="factorNumCell">{{factorNumtoString[2]}}</td>
+              <td class="factorNumCell">{{factorNumtoString[3]}}</td>
+              <td class="factorNumCell">{{factorNumtoString[4]}}</td>
+              <td class="factorNumCell">{{factorNumtoString[5]}}</td>
+              <td class="factorNumCell">{{factorNumtoString[6]}}</td>
+              <td class="factorNumCell">{{factorNumtoString[7]}}</td>
+              <td class="factorNumCell">{{factorNumtoString[8]}}</td>
+              <td class="factorNumCell">{{factorNumtoString[9]}}</td>
+              <td class="factorNumCell">{{factorNumtoString[10]}}</td>
+              <td class="factorNumCell">{{factorNumtoString[11]}}</td>
+		        </tr>
+            <tr>
+              <td colspan="14" class="f00_inbreed_header"></td>
+              <td rowspan="2" @click="initializer()" style="background-color: #aa0000" align="center"><v-icon size="large" color="white">mdi-reload</v-icon></td>
+            </tr>
+		        <tr>
+      			  <td colspan="2" class="f00_inbreed">クロス</td>
+              <td class="factorNumCell">{{inbreedFactorNumtoString[0]}}</td>
+              <td class="factorNumCell">{{inbreedFactorNumtoString[1]}}</td>
+              <td class="factorNumCell">{{inbreedFactorNumtoString[2]}}</td>
+              <td class="factorNumCell">{{inbreedFactorNumtoString[3]}}</td>
+              <td class="factorNumCell">{{inbreedFactorNumtoString[4]}}</td>
+              <td class="factorNumCell">{{inbreedFactorNumtoString[5]}}</td>
+              <td class="factorNumCell">{{inbreedFactorNumtoString[6]}}</td>
+              <td class="factorNumCell">{{inbreedFactorNumtoString[7]}}</td>
+              <td class="factorNumCell">{{inbreedFactorNumtoString[8]}}</td>
+              <td class="factorNumCell">{{inbreedFactorNumtoString[9]}}</td>
+              <td class="factorNumCell">{{inbreedFactorNumtoString[10]}}</td>
+              <td class="factorNumCell">{{inbreedFactorNumtoString[11]}}</td>
+            </tr>            <!-- ここから下がいらない -->
+            <!-- <tr>
+              
+              <th rowspan="3" class="f00_nitro_space"></th>
+              <th rowspan="3" class="f00_nitro">
+                <span>ニトロ</span>
+              </th>
+              <th colspan="7" class="f00_nitro_header"></th>
+              <th rowspan="3" class="f00_inbreed_space"></th>
+              <th rowspan="3" class="f00_inbreed" @click="handleClick()">
+                <span>クロス</span>
+              </th>
+              <th colspan="7" class="f00_inbreed_header"></th>
+
+              <th rowspan="2" class="table_footer_TH_theory">理論</th>
+
+              <th
+                rowspan="3"
+                width="9%"
+                @click="initializer()"
+                style="background-color: #aa0000"
+              >
+                <v-icon size="x-large" color="white">mdi-reload</v-icon>
+              </th>
+            </tr>
+            <tr class="f00">
+              <th class="f01">短</th>
+              <th class="f02">速</th>
+              <th class="f03">底</th>
+              <th class="f04">長</th>
+              <th class="f07">晩</th>
+              <th class="f09">堅</th>
+              <th class="f10">難</th>
+              <th class="f01">短</th>
+              <th class="f02">速</th>
+              <th class="f03">底</th>
+              <th class="f04">長</th>
+              <th class="f07">晩</th>
+              <th class="f09">堅</th>
+              <th class="f10">難</th>
+            </tr>
+            <tr>
+              <th class="factorNumCell">{{factorNumtoString[0]}}</th>
+              <th class="factorNumCell">{{factorNumtoString[1]}}</th>
+              <th class="factorNumCell">{{factorNumtoString[2]}}</th>
+              <th class="factorNumCell">{{factorNumtoString[3]}}</th>
+              <th class="factorNumCell">{{factorNumtoString[7]}}</th>
+              <th class="factorNumCell">{{factorNumtoString[8]}}</th>
+              <th class="factorNumCell">{{factorNumtoString[9]}}</th>
+              <th class="factorNumCell">{{inbreedFactorNumtoString[0]}}</th>
+              <th class="factorNumCell">{{inbreedFactorNumtoString[1]}}</th>
+              <th class="factorNumCell">{{inbreedFactorNumtoString[2]}}</th>
+              <th class="factorNumCell">{{inbreedFactorNumtoString[3]}}</th>
+              <th class="factorNumCell">{{inbreedFactorNumtoString[7]}}</th>
+              <th class="factorNumCell">{{inbreedFactorNumtoString[8]}}</th>
+              <th class="factorNumCell">{{inbreedFactorNumtoString[9]}}</th>
+              <th :class="styleThoeryClass"></th>
+            </tr> -->
           </tbody>
         </table>
       </header>
@@ -188,6 +318,8 @@
                         :selected="selected"
                         :horses="horseDataLists"
                         :on-change="onChange"
+                        :disp-category="dispCategory"
+                        :category="category"
                       ></common-autocomplete>
                     </td>
 
@@ -244,6 +376,8 @@
                         :selected="selected"
                         :horses="horseDataLists"
                         :on-change="onChange"
+                        :disp-category="dispCategory"
+                        :category="category"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[1]">
@@ -307,6 +441,8 @@
                         :selected="selected"
                         :horses="horseDataLists"
                         :on-change="onChange"
+                        :disp-category="dispCategory"
+                        :category="category"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[2]">
@@ -370,6 +506,8 @@
                         :selected="selected"
                         :horses="horseDataLists"
                         :on-change="onChange"
+                        :disp-category="dispCategory"
+                        :category="category"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[4]">
@@ -426,6 +564,8 @@
                         :selected="selected"
                         :horses="horseDataLists"
                         :on-change="onChange"
+                        :disp-category="dispCategory"
+                        :category="category"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[8]">
@@ -482,6 +622,8 @@
                         :selected="selected"
                         :horses="horseDataLists"
                         :on-change="onChange"
+                        :disp-category="dispCategory"
+                        :category="category"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[9]">
@@ -540,6 +682,8 @@
                         :selected="selected"
                         :horses="horseDataLists"
                         :on-change="onChange"
+                        :disp-category="dispCategory"
+                        :category="category"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[5]">
@@ -599,6 +743,8 @@
                         :selected="selected"
                         :horses="horseDataLists"
                         :on-change="onChange"
+                        :disp-category="dispCategory"
+                        :category="category"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[10]">
@@ -655,6 +801,8 @@
                         :selected="selected"
                         :horses="horseDataLists"
                         :on-change="onChange"
+                        :disp-category="dispCategory"
+                        :category="category"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[11]">
@@ -713,6 +861,8 @@
                         :selected="selected"
                         :horses="horseDataLists"
                         :on-change="onChange"
+                        :disp-category="dispCategory"
+                        :category="category"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[3]">
@@ -772,6 +922,8 @@
                         :selected="selected"
                         :horses="horseDataLists"
                         :on-change="onChange"
+                        :disp-category="dispCategory"
+                        :category="category"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[6]">
@@ -828,6 +980,8 @@
                         :selected="selected"
                         :horses="horseDataLists"
                         :on-change="onChange"
+                        :disp-category="dispCategory"
+                        :category="category"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[12]">
@@ -884,6 +1038,8 @@
                         :selected="selected"
                         :horses="horseDataLists"
                         :on-change="onChange"
+                        :disp-category="dispCategory"
+                        :category="category"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[13]">
@@ -942,6 +1098,8 @@
                         :selected="selected"
                         :horses="horseDataLists"
                         :on-change="onChange"
+                        :disp-category="dispCategory"
+                        :category="category"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[7]">
@@ -1001,6 +1159,8 @@
                         :selected="selected"
                         :horses="horseDataLists"
                         :on-change="onChange"
+                        :disp-category="dispCategory"
+                        :category="category"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[14]">
@@ -1057,6 +1217,8 @@
                         :selected="selected"
                         :horses="horseDataLists"
                         :on-change="onChange"
+                        :disp-category="dispCategory"
+                        :category="category"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[15]">
@@ -1130,6 +1292,8 @@
                         :selected="selected"
                         :horses="horseDataLists"
                         :on-change="onChange"
+                        :disp-category="dispCategory"
+                        :category="category"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[0 + 16]">
@@ -1165,7 +1329,7 @@
                         ><v-icon>mdi-heart</v-icon></v-btn
                       >
                     </td>
-                    <td :class="styleFactorClasses[0 + 16][0]">
+                    <!-- <td :class="styleFactorClasses[0 + 16][0]">
                       {{factorName[0 + 16][0]}}
                     </td>
                     <td :class="styleFactorClasses[0 + 16][1]">
@@ -1173,6 +1337,10 @@
                     </td>
                     <td :class="styleFactorClasses[0 + 16][2]">
                       {{factorName[0 + 16][2]}}
+                    </td> -->
+                    <td colspan="3" :class="styleFactorClasses[0 + 16][0]">
+                      <v-btn v-if="$vuetify.breakpoint.mdAndUp" variant="outlined" @click="handleClick()">{{dispButtonName}}</v-btn>
+                      <v-btn v-if="$vuetify.breakpoint.smAndDown" variant="outlined" x-small @click="handleClick()">{{dispButtonName}}</v-btn>
                     </td>
                   </tr>
 
@@ -1187,6 +1355,8 @@
                         :selected="selected"
                         :horses="horseDataLists"
                         :on-change="onChange"
+                        :disp-category="dispCategory"
+                        :category="category"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[1 + 16]">
@@ -1250,6 +1420,8 @@
                         :selected="selected"
                         :horses="horseDataLists"
                         :on-change="onChange"
+                        :disp-category="dispCategory"
+                        :category="category"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[2 + 16]">
@@ -1313,6 +1485,8 @@
                         :selected="selected"
                         :horses="horseDataLists"
                         :on-change="onChange"
+                        :disp-category="dispCategory"
+                        :category="category"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[4 + 16]">
@@ -1371,6 +1545,8 @@
                         :selected="selected"
                         :horses="horseDataLists"
                         :on-change="onChange"
+                        :disp-category="dispCategory"
+                        :category="category"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[8 + 16]">
@@ -1429,6 +1605,8 @@
                         :selected="selected"
                         :horses="horseDataLists"
                         :on-change="onChange"
+                        :disp-category="dispCategory"
+                        :category="category"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[9 + 16]">
@@ -1487,6 +1665,8 @@
                         :selected="selected"
                         :horses="horseDataLists"
                         :on-change="onChange"
+                        :disp-category="dispCategory"
+                        :category="category"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[5 + 16]">
@@ -1546,6 +1726,8 @@
                         :selected="selected"
                         :horses="horseDataLists"
                         :on-change="onChange"
+                        :disp-category="dispCategory"
+                        :category="category"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[10 + 16]">
@@ -1604,6 +1786,8 @@
                         :selected="selected"
                         :horses="horseDataLists"
                         :on-change="onChange"
+                        :disp-category="dispCategory"
+                        :category="category"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[11 + 16]">
@@ -1662,6 +1846,8 @@
                         :selected="selected"
                         :horses="horseDataLists"
                         :on-change="onChange"
+                        :disp-category="dispCategory"
+                        :category="category"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[3 + 16]">
@@ -1721,6 +1907,8 @@
                         :selected="selected"
                         :horses="horseDataLists"
                         :on-change="onChange"
+                        :disp-category="dispCategory"
+                        :category="category"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[6 + 16]">
@@ -1779,6 +1967,8 @@
                         :selected="selected"
                         :horses="horseDataLists"
                         :on-change="onChange"
+                        :disp-category="dispCategory"
+                        :category="category"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[12 + 16]">
@@ -1837,6 +2027,8 @@
                         :selected="selected"
                         :horses="horseDataLists"
                         :on-change="onChange"
+                        :disp-category="dispCategory"
+                        :category="category"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[13 + 16]">
@@ -1895,6 +2087,8 @@
                         :selected="selected"
                         :horses="horseDataLists"
                         :on-change="onChange"
+                        :disp-category="dispCategory"
+                        :category="category"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[7 + 16]">
@@ -1954,6 +2148,8 @@
                         :selected="selected"
                         :horses="horseDataLists"
                         :on-change="onChange"
+                        :disp-category="dispCategory"
+                        :category="category"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[14 + 16]">
@@ -2012,6 +2208,8 @@
                         :selected="selected"
                         :horses="horseDataLists"
                         :on-change="onChange"
+                        :disp-category="dispCategory"
+                        :category="category"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[15 + 16]">
@@ -2104,7 +2302,63 @@
         );
       }
     }
-
+    
+    // 始祖
+    const founder = [
+      {key:"Intent" ,value:"インテント系"},
+      {key:"エタン" ,value:"エタン系"},
+      {key:"Owen Tudor" ,value:"オーエンテューダー系"},
+      {key:"Aureole" ,value:"オリオール系"},
+      {key:"Khaled" ,value:"カーレッド系"},
+      {key:"Clarion" ,value:"クラリオン系"},
+      {key:"Grey Sovereign" ,value:"グレイソヴリン系"},
+      {key:"Sir Gaylord" ,value:"サーゲイロード系"},
+      {key:"Son-in-Law" ,value:"サンインロー系"},
+      {key:"Swynford" ,value:"スインフォード系"},
+      {key:"ゼダーン" ,value:"ゼダーン系"},
+      {key:"St.Simon" ,value:"セントサイモン系"},
+      {key:"Sovereign Path" ,value:"ソヴリンパス系"},
+      {key:"ダンテ" ,value:"ダンテ系"},
+      {key:"Teddy" ,value:"テディ系"},
+      {key:"Tourbillon" ,value:"トウルビヨン系"},
+      {key:"Tom Fool" ,value:"トムフール系"},
+      {key:"Nasrullah" ,value:"ナスルーラ系"},
+      {key:"Nearctic" ,value:"ニアークティック系"},
+      {key:"ネアルコ" ,value:"ネアルコ系"},
+      {key:"ネイティヴダンサー" ,value:"ネイティヴダンサー系"},
+      {key:"Never Say Die" ,value:"ネヴァーセイダイ系"},
+      {key:"Never Bend" ,value:"ネヴァーベンド系"},
+      {key:"ノーザンダンサー" ,value:"ノーザンダンサー系"},
+      {key:"ハイペリオン" ,value:"ハイペリオン系"},
+      {key:"ハビタット" ,value:"ハビタット系"},
+      {key:"Fine Top" ,value:"ファイントップ系"},
+      {key:"Phalaris" ,value:"ファラリス系"},
+      {key:"Pharis" ,value:"ファリス系"},
+      {key:"Pharos" ,value:"ファロス系"},
+      {key:"Fairway" ,value:"フェアウェイ系"},
+      {key:"Fair Trial" ,value:"フェアトライアル系"},
+      {key:"フォルティノ" ,value:"フォルティノ系"},
+      {key:"Brantome" ,value:"ブラントーム系"},
+      {key:"Blandford" ,value:"ブランドフォード系"},
+      {key:"Princequillo" ,value:"プリンスキロ系"},
+      {key:"Prince Bio" ,value:"プリンスビオ系"},
+      {key:"Princely Gift" ,value:"プリンスリーギフト系"},
+      {key:"Prince Rose" ,value:"プリンスローズ系"},
+      {key:"Blenheim" ,value:"ブレニム系"},
+      {key:"ヘイルトゥリーズン" ,value:"ヘイルトゥリーズン系"},
+      {key:"ボールドルーラー" ,value:"ボールドルーラー系"},
+      {key:"Bois Roussel" ,value:"ボワルセル系"},
+      {key:"My Babu" ,value:"マイバブー系"},
+      {key:"Man o'War" ,value:"マンノウォー系"},
+      {key:"Mossborough" ,value:"モスボロー系"},
+      {key:"Ribot" ,value:"リボー系"},
+      {key:"Raise a Native" ,value:"レイズアネイティヴ系"},
+      {key:"Red God" ,value:"レッドゴッド系"},
+      {key:"Relic" ,value:"レリック系"},
+      {key:"Royal Charger" ,value:"ロイヤルチャージャー系"},
+      {key:"Rockefella" ,value:"ロックフェラ系"},
+      {key:"ワイルドリスク" ,value:"ワイルドリスク系"},
+    ]
     const factorMap = new Map();
 
     Vue.component("common-table-component", {
@@ -2171,6 +2425,7 @@
     Vue.component("common-autocomplete", {
       template: `
       <v-autocomplete
+        v-if="dispCategory%2 === 0"
         :value="selected[index]"
         :items="lists"
         :item-text="horse => horse.name + horse.subName"
@@ -2189,6 +2444,12 @@
           </template>
 		    </template>
       </v-autocomplete>
+      <v-text-field
+        v-else
+        :value="category[index]"
+        solo
+        readonly
+      ></v-text-field>
     `,
       props: {
         index: {
@@ -2205,6 +2466,14 @@
         },
         onChange: {
           type: Function,
+          required: true,
+        },
+        dispCategory: {
+          type: Number,
+          required: true,
+        },
+        category: {
+          type: Array,
           required: true,
         },
       },
@@ -2339,7 +2608,10 @@
           horseDataLists: [[], [], []],
           factorCd: Array.from(new Array(32), () => new Array(3).fill("00")),
           selected: Array.from(new Array(32).fill(null)),
+          // 親系統
           parentLines: Array.from(new Array(32).fill("")),
+          // 子系統
+          category: Array.from(new Array(32).fill(null)),
           stallions: [],
           stallionsBase: [],
           broodmares: [],
@@ -2360,10 +2632,14 @@
 
           // styleParentLineClassesを一次元配列で定義
           styleParentLineClasses: Array.from(new Array(32).fill("")),
-          // 合計因子数表示
-          factorNumtoString: Array.from(new Array(10).fill("00")),
-          // インブリードされた因子数表示
-          inbreedFactorNumtoString: Array.from(new Array(10).fill("00")),
+          // 合計因子数表示（走中因子も）
+          //factorNumtoString: Array.from(new Array(10).fill("00")),
+          factorNumtoString: Array.from(new Array(12).fill("00")),
+          // インブリードされた因子数表示（走長因子も）
+          //inbreedFactorNumtoString: Array.from(new Array(10).fill("00")),
+          inbreedFactorNumtoString: Array.from(new Array(12).fill("00")),
+          // 子系統数
+          categoryNumtoString: "00",
 
           // 配合理論
           styleThoeryClass: "",
@@ -2371,11 +2647,21 @@
           // リストで選択された性別
           selectedSex: null,
 
+          // 子系統を表示させるフラグ
+          dispCategory: 0,
+          // ボタン表示名
+          dispButtonName: '子系統',
+
           // インブリードされているところを格納する変数
           inbreedList: Array.from(new Array(32).fill(null)),
           reload: 0,
           size: {},
         };
+      },
+      watch: {
+        dispCategory: function(value) {
+          this.dispButtonName = value%2 === 0 ? '子系統' : '因　子';
+        },
       },
 
       //async created () {
@@ -2433,6 +2719,8 @@
             factorMap.set("晩", "08");
             factorMap.set("堅", "09");
             factorMap.set("難", "10");
+            factorMap.set("走", "11");
+            factorMap.set("中", "12");
 
             // 因子部分のCSS設定
             for (var i = 0; i < this.styleFactorClasses.length; i++) {
@@ -2514,6 +2802,9 @@
           ];
           this.horseDataLists = [this.horses, this.stallions, this.broodmares];
           this.selected = JSON.parse(localStorage.getItem("dabimasFactor"));
+          this.category = JSON.parse(
+            localStorage.getItem("dabimasFactorCategory")
+          );
 
           // 因子・親系統を詰める
           this.selected.map((element, index) => {
@@ -2538,7 +2829,7 @@
 
           // カウントした画面に表示させる
           this.factorNumtoString = this.dispFactorCounts(this.factorCd);
-
+          this.categoryNumtoString = this.dispCategoryCount();
           // 配合理論を求めて画面に表示させる
           this.dispTheory();
           // クロスを判定して表示させる
@@ -2550,6 +2841,7 @@
           localStorage.removeItem("dabimasFactor");
 
           this.selected = Array.from(new Array(32).fill(null));
+          this.category = Array.from(new Array(32).fill(null));
           this.dispColor = Array.from(new Array(32).fill(""));
           // baseをコピーする
           this.stallions = [...this.stallionsBase];
@@ -2579,16 +2871,22 @@
           );
 
           // 合計因子数表示
-          this.factorNumtoString = Array.from(new Array(10).fill("00"));
+          // this.factorNumtoString = Array.from(new Array(10).fill("00"));
+          this.factorNumtoString = Array.from(new Array(12).fill("00"));
+
           // インブリード因子数表示
-          this.inbreedFactorNumtoString = Array.from(new Array(10).fill("00"));
+          // this.inbreedFactorNumtoString = Array.from(new Array(10).fill("00"));
+          this.inbreedFactorNumtoString = Array.from(new Array(12).fill("00"));
+
+          // 子系統数
+          this.categoryNumtoString = "00";
 
           // 合計因子数内部変数
-          (this.factorCd = Array.from(new Array(32), () =>
+          this.factorCd = Array.from(new Array(32), () =>
             new Array(3).fill("00")
-          )),
-            // 親系統表示
-            (this.parentLines = Array.from(new Array(32).fill("")));
+          );
+          // 親系統表示
+          this.parentLines = Array.from(new Array(32).fill(""));
 
           // 理論表示
           this.styleThoeryClass = "";
@@ -2597,9 +2895,15 @@
 
           // インブリードボタン押下フラグを一次元配列で定義（-1：未クリック　1：クリック　0:使用不可）
           this.isInbreedButtonClicked = Array.from(new Array(32).fill(0));
+          // 子系統を表示させるフラグ
+          this.dispCategory = 0;
+
           this.reload++;
         },
-
+        handleClick() {
+          this.dispCategory++;
+          console.log("dispCategory:" + this.dispCategory);
+        },
         getCss: function (i) {
           let css = "";
           switch (i) {
@@ -2690,6 +2994,8 @@
 
           // カウントした画面に表示させる
           this.factorNumtoString = this.dispFactorCounts(this.factorCd);
+          // カウントした子系統数を表示させる
+          this.categoryNumtoString = this.dispCategoryCount();
 
           // 配合理論を求めて画面に表示させる
           this.dispTheory();
@@ -2699,6 +3005,7 @@
 
           // 内容をローカルに保存する
           localStorage.setItem("dabimasFactor", JSON.stringify(this.selected));
+          localStorage.setItem("dabimasFactorCategory",JSON.stringify(this.category));
         },
 
         // リストから削除
@@ -2762,6 +3069,7 @@
             }
             // リストから消す
             this.selected[deleteHorse.index] = null;
+            this.category[deleteHorse.index] = null;
 
             this.factorName[deleteIndex][0] = "";
             this.factorName[deleteIndex][1] = "";
@@ -2807,10 +3115,9 @@
             this.reload++;
             // インブリードの色も初期化
             this.dispColor = Array.from(new Array(32).fill(""));
-            // インブリード因子数表示
-            this.inbreedFactorNumtoString = Array.from(
-              new Array(10).fill("00")
-            );
+            // インブリード因子数表示（中長因子も）
+            //this.inbreedFactorNumtoString = Array.from(new Array(10).fill("00"));
+            this.inbreedFactorNumtoString = Array.from(new Array(12).fill("00"));
             // インブリードされているところを格納する変数
             this.inbreedList = Array.from(new Array(32).fill(null));
           }
@@ -3152,14 +3459,6 @@
             // チェック４
             // 相手の中に同じ名前がいることをチェックする
             // 種側で選択されたのと、肌側で選択されたのが同じ場合かつクロス名が同じ　or 種側で選択されたのと、肌側で選択されたのが異なる場合かつクロス名も違う
-            // const tmpInbreedArray = broodmaresArray.filter(partner =>
-            //             (partner.name === horse.name && partner.selectedHorse === horse.selectedHorse && horse.name === horse.selectedHorse) ||
-            //             (horse.fullBrothers.some(value => value === partner.name) && partner.selectedHorse === horse.selectedHorse && horse.name === horse.selectedHorse) ||
-            //             (partner.fullBrothers.some(value => value === horse.name) && partner.selectedHorse === horse.selectedHorse && horse.name === horse.selectedHorse) ||
-            //             (partner.name === horse.name && partner.selectedHorse !== horse.selectedHorse ) ||
-            //             (horse.fullBrothers.some(value => value === partner.name) && partner.selectedHorse !== horse.selectedHorse ) ||
-            //             (partner.fullBrothers.some(value => value === horse.name) && partner.selectedHorse !== horse.selectedHorse )
-            // );
             const tmpInbreedArray = broodmaresArray.filter(
               (partner) =>
                 (partner.name === horse.name &&
@@ -3167,8 +3466,6 @@
                   horse.name === horse.selectedHorse) ||
                 (partner.name === horse.name &&
                   partner.selectedHorse !== horse.selectedHorse)
-              // (partner.name === horse.name && (partner.fullBrothers.some(s=>s) && partner.fullBrothers.some(value => value === horse.selectedHorse)) && horse.name === horse.selectedHorse) ||
-              // (partner.name === horse.name && !(partner.fullBrothers.some(s=>s) && partner.fullBrothers.some(value => value === horse.selectedHorse)))
             );
 
             if (tmpInbreedArray.length > 0) {
@@ -3204,12 +3501,10 @@
 
               // 判定を行わないための上書きする（種牡馬）
               for (const overWriteIndex of overWriteQue) {
-                // horseArray[overWriteIndex].selectedHorse = horse.name;
                 stallionsArray[overWriteIndex].selectedHorse = horse.name;
               }
               // 判定を行わないための上書きする（繁殖牝馬）
               for (const overWriteIndex of overWriteQueMare) {
-                // horseArray[overWriteIndex].selectedHorse = horse.name;
                 broodmaresArray[overWriteIndex].selectedHorse = horse.name;
               }
 
@@ -3288,7 +3583,6 @@
           // 血統表全部が埋まっている場合に理論判定
           if (this.selected.every((e) => e)) {
             this.styleThoeryClass = this.compatibility(S, D);
-            console.log(this.styleThoeryClass);
           } else {
             // 理論系統が埋まっていない場合は、空白を設定
             this.styleThoeryClass = "";
@@ -3407,7 +3701,7 @@
             }
           }
 
-          let factorNumtoString = Array.from(new Array(10).fill("00"));
+          let factorNumtoString = Array.from(new Array(12).fill("00"));
           //ソートされたものを
           for (var i = 0; i < factorNumtoString.length; i++) {
             var ret = ("00" + (i + 1)).slice(-2);
@@ -3420,6 +3714,11 @@
           return factorNumtoString;
         },
 
+        // カウントした子系統数を画面に表示させる
+        dispCategoryCount: function () {
+          const allSet = this.selected.every((e) => e) ? 0 : -1;
+          return (new Set(this.category).size + allSet).toString();
+        },
         //血統表に埋めるために配列を入れ替える
         setDataForPedigree: function (sex, id, horseData) {
           const retDataForPedigree = Array.from(new Array(16).fill(null));
@@ -3903,7 +4202,8 @@
         setPedigree: function (sex, cellNo, horseDataList) {
           // 詰めるためのキューを取得する
           const cell_id_que = this.getCellIdQue(cellNo, horseDataList);
-
+          // 配列の先頭1件
+          let isFirst = true;
           // 先祖に向かって血統表をセットする
           for (const cell_id of cell_id_que) {
             // 名前をセットする
@@ -3932,36 +4232,21 @@
                 ];
               }
             }
-            // // else if (!(horseDataList[cell_id_que.indexOf(cell_id)])) {
-            // else if (!(horseDataList[cell_id])) {
-            //   // 空の場合はリストから削除する
-            //   // リストから選択できない種牡馬をリストから削除する
-            //   // 削除したい名前をセッ
-            //   const deleteName = this.selected[cell_id + (sex * 16)].name;
-            //   const deleteSubName = this.selected[cell_id + (sex * 16)].subName;
-            //   const deleteDisabled = this.selected[cell_id + (sex * 16)].disabled;
-
-            //   // 削除したい名前が配列のどこにあるのか取得
-            //   const deleteHorsesIndex = this.horses.findIndex(object => object?.name === deleteName && object?.subName === deleteSubName && object?.disabled === true);
-            //   const deleteStallionsIndex = this.stallions.findIndex(object => object?.name === deleteName && object?.subName === deleteSubName && object?.disabled === true);
-
-            //   // 取得した配列の位置のものを削除する
-            //   if (deleteHorsesIndex !== -1) {
-            //     this.horses.splice(deleteHorsesIndex, 1);
-            //   }
-            //   if (deleteStallionsIndex !== -1) {
-            //     this.stallions.splice(deleteStallionsIndex, 1);
-            //   }
-            // }
 
             // セットする＋自分の位置も併せてセットする
             if (horseDataList[cell_id_que.indexOf(cell_id)]) {
               this.selected[cell_id + sex * 16] = {
                 ...horseDataList[cell_id_que.indexOf(cell_id)],
                 index: cell_id + sex * 16,
+                selfSelected: isFirst,
               };
+              this.category[cell_id + sex * 16] =
+                horseDataList[cell_id_que.indexOf(cell_id)].son;
+              // 配列の先頭フラグを落とす
+              isFirst = false;
             } else {
               this.selected[cell_id + sex * 16] = null;
+              this.category[cell_id + sex * 16] = null;
             }
 
             // 配列に因子名を詰め込む
@@ -4049,6 +4334,7 @@
           const subName = horseDataList[0]?.subName;
           const parentLine = horseDataList[0]?.parentLine;
           const uuid = horseDataList[0]?.uuid;
+          const son = horseDataList[0]?.son;
           while (this.isEven(reverseNum)) {
             // 2で割る
             reverseNum = Math.floor(reverseNum / 2);
@@ -4083,7 +4369,10 @@
                   fullBrothers: Array.from(new Array(2).fill("")),
                   fullSisters: Array.from(new Array(2).fill("")),
                   uuid: uuid,
+                  selfSelected: false,
                 };
+                // 子系統をセット
+                this.category[reverseNum + sex * 16] = son;
               } else {
                 // 名前をセット
                 this.horses = [
@@ -4122,50 +4411,17 @@
                   disabled: true,
                   index: reverseNum + sex * 16,
                   uuid: uuid,
+                  selfSelected: false,
                 };
                 // 親系統を設定する
                 this.setParentLine(
                   reverseNum + sex * 16,
                   this.judgeSetParentLine(parentLine, reverseNum + sex * 16)
                 );
+                // 子系統をセット
+                this.category[reverseNum + sex * 16] = son;
               }
             }
-            // else {
-            //   // 削除モード
-            //   if (reverseNum === 0 && sex === 1) {
-            //     // 自家製牝馬を削除する
-            //     // 削除したい名前をセット
-            //     const deleteName = this.selected[reverseNum + (sex * 16)].name
-            //     // 名前はNULLをセット
-            //     this.selected[reverseNum + (sex * 16)] = null;
-            //     // 削除したい名前が配列のどこにあるのか取得
-            //     const deleteBroodmaresIndex = this.broodmares.findIndex(object => object.name === deleteName);
-            //     // 取得した配列の位置のものを削除する
-            //     if (deleteBroodmaresIndex !== -1) {
-            //       this.broodmares.splice(deleteBroodmaresIndex, 1);
-            //     }
-            //   }
-            //   else {
-            //     // 自家製種牡馬を削除する
-            //     // 削除したい名前をセット
-            //     const deleteName = this.selected[reverseNum + (sex * 16)].name
-            //     // 名前はNULLをセット
-            //     this.selected[reverseNum + (sex * 16)] = null;
-            //     // 削除したい名前が配列のどこにあるのか取得
-            //     const deleteHorsesIndex = this.horses.findIndex(object => object.name === deleteName);
-            //     const deleteStallionsIndex = this.stallions.findIndex(object => object.name === deleteName);
-            //     // 取得した配列の位置のものを削除する
-            //     if (deleteHorsesIndex !== -1) {
-            //       this.horses.splice(deleteHorsesIndex, 1);
-            //     }
-            //     if (deleteStallionsIndex !== -1) {
-            //       this.stallions.splice(deleteStallionsIndex, 1);
-            //     }
-            //     // 親系統を設定する
-            //     this.setParentLine(reverseNum + (sex * 16), this.judgeSetParentLine(parentLine,reverseNum + (sex * 16)));
-            //   }
-            // }
-
             // 配列に因子名を詰め込む
             this.setFactorName(reverseNum + sex * 16, 0, "");
             this.setFactorName(reverseNum + sex * 16, 1, "");

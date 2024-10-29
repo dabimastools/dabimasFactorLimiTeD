@@ -3328,9 +3328,9 @@
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
   }
   @media screen and (max-height: 769px) {
-    /* ヘッダに種牡馬検索とか出てくる端末用 */
+    /* ヘッダに種牡馬検索とか出てこない端末用 */
     html {
-      font-size: 12px;
+      font-size: 16px;
       overflow-x: hidden;
       text-rendering: optimizeLegibility;
       -webkit-font-smoothing: antialiased;
@@ -17096,14 +17096,6 @@
     }
   }
 
-  @media screen and (max-height: 700px) {
-    /* 960px以上に適用されるCSS（PC用） */
-    .v-text-field.v-text-field--solo .v-input__control {
-      min-height: 30px;
-      padding: 0
-    }
-  }
-
   /* change↑ */
   .v-text-field.v-text-field--solo .v-input__control input {
     caret-color: auto
@@ -17438,7 +17430,7 @@
   .v-input__control {
     display: flex;
     flex-direction: column;
-    height:calc( ( 100vh - 80px - 5px) / 32 );
+    height:calc( ( 100dvh - 80px - 5px) / 32 );
     flex-grow: 1;
     flex-wrap: wrap;
     min-width: 0;

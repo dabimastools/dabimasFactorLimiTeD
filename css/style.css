@@ -1036,6 +1036,233 @@ div.horse_spec {
   /* 文字の影 */
 }
 
+@media screen and (max-height: 769px) {
+  /* ヘッダに種牡馬検索とか出てこない端末用 */
+  /*短*/
+  .f01 {
+    font-size: 12px;
+    text-align: center;
+    color: #000000;
+    /* 文字の影 */
+    background: #fdfd00;
+    text-shadow:
+      1px 1px 0px #ffffff,
+      -1px 1px 0px #ffffff,
+      1px -1px 0px #ffffff,
+      -1px -1px 0px #ffffff,
+      1px 0px 0px #ffffff,
+      0px 1px 0px #ffffff,
+      -1px 0px 0px #ffffff,
+      0px -1px 0px #ffffff;
+  }
+
+  /*速*/
+  .f02 {
+    font-size: 12px;
+    text-align: center;
+    color: #000000;
+    /* 文字の影 */
+    background: #fdfda2;
+    text-shadow:
+      1px 1px 0px #ffffff,
+      -1px 1px 0px #ffffff,
+      1px -1px 0px #ffffff,
+      -1px -1px 0px #ffffff,
+      1px 0px 0px #ffffff,
+      0px 1px 0px #ffffff,
+      -1px 0px 0px #ffffff,
+      0px -1px 0px #ffffff;
+  }
+
+  /*底*/
+  .f03 {
+    font-size: 12px;
+    text-align: center;
+    color: #000000;
+    /* 文字の影 */
+    background: #fc6e00;
+    text-shadow:
+      1px 1px 0px #ffffff,
+      -1px 1px 0px #ffffff,
+      1px -1px 0px #ffffff,
+      -1px -1px 0px #ffffff,
+      1px 0px 0px #ffffff,
+      0px 1px 0px #ffffff,
+      -1px 0px 0px #ffffff,
+      0px -1px 0px #ffffff;
+  }
+
+  /*長*/
+  .f04 {
+    font-size: 12px;
+    text-align: center;
+    color: #000000;
+    /* 文字の影 */
+    background: #03fdfd;
+    text-shadow:
+      1px 1px 0px #ffffff,
+      -1px 1px 0px #ffffff,
+      1px -1px 0px #ffffff,
+      -1px -1px 0px #ffffff,
+      1px 0px 0px #ffffff,
+      0px 1px 0px #ffffff,
+      -1px 0px 0px #ffffff,
+      0px -1px 0px #ffffff;
+  }
+
+  /*砂*/
+  .f05 {
+    font-size: 12px;
+    text-align: center;
+    color: #000000;
+    /* 文字の影 */
+    background: #fddba5;
+    text-shadow:
+      1px 1px 0px #ffffff,
+      -1px 1px 0px #ffffff,
+      1px -1px 0px #ffffff,
+      -1px -1px 0px #ffffff,
+      1px 0px 0px #ffffff,
+      0px 1px 0px #ffffff,
+      -1px 0px 0px #ffffff,
+      0px -1px 0px #ffffff;
+  }
+
+  /*丈*/
+  .f06 {
+    font-size: 12px;
+    text-align: center;
+    color: #000000;
+    /* 文字の影 */
+    background: #feabdd;
+    text-shadow:
+      1px 1px 0px #ffffff,
+      -1px 1px 0px #ffffff,
+      1px -1px 0px #ffffff,
+      -1px -1px 0px #ffffff,
+      1px 0px 0px #ffffff,
+      0px 1px 0px #ffffff,
+      -1px 0px 0px #ffffff,
+      0px -1px 0px #ffffff;
+    /* 文字の影 */
+  }
+
+  /*早*/
+  .f07 {
+    font-size: 12px;
+    text-align: center;
+    color: #000000;
+    /* 文字の影 */
+    background: #02fe02;
+    text-shadow:
+      1px 1px 0px #ffffff,
+      -1px 1px 0px #ffffff,
+      1px -1px 0px #ffffff,
+      -1px -1px 0px #ffffff,
+      1px 0px 0px #ffffff,
+      0px 1px 0px #ffffff,
+      -1px 0px 0px #ffffff,
+      0px -1px 0px #ffffff;
+    /* 文字の影 */
+  }
+
+  /*晩*/
+  .f08 {
+    font-size: 12px;
+    text-align: center;
+    color: #000000;
+    /* 文字の影 */
+    background: #a7de0d;
+    text-shadow:
+      1px 1px 0px #ffffff,
+      -1px 1px 0px #ffffff,
+      1px -1px 0px #ffffff,
+      -1px -1px 0px #ffffff,
+      1px 0px 0px #ffffff,
+      0px 1px 0px #ffffff,
+      -1px 0px 0px #ffffff,
+      0px -1px 0px #ffffff;
+    /* 文字の影 */
+  }
+
+  /*堅*/
+  .f09 {
+    font-size: 12px;
+    text-align: center;
+    color: #000000;
+    /* 文字の影 */
+    background: #a1a1a3;
+    text-shadow:
+      1px 1px 0px #ffffff,
+      -1px 1px 0px #ffffff,
+      1px -1px 0px #ffffff,
+      -1px -1px 0px #ffffff,
+      1px 0px 0px #ffffff,
+      0px 1px 0px #ffffff,
+      -1px 0px 0px #ffffff,
+      0px -1px 0px #ffffff;
+    /* 文字の影 */
+  }
+
+  /*難*/
+  .f10 {
+    font-size: 12px;
+    text-align: center;
+    color: #000000;
+    /* 文字の影 */
+    background: #fc00fc;
+    text-shadow:
+      1px 1px 0px #ffffff,
+      -1px 1px 0px #ffffff,
+      1px -1px 0px #ffffff,
+      -1px -1px 0px #ffffff,
+      1px 0px 0px #ffffff,
+      0px 1px 0px #ffffff,
+      -1px 0px 0px #ffffff,
+      0px -1px 0px #ffffff;
+    /* 文字の影 */
+  }
+
+  /*走*/
+  .f11 {
+    font-size: 12px;
+    text-align: center;
+    color: #000000;
+    /* 文字の影 */
+    background: #f1eeea;
+    text-shadow:
+      1px 1px 0px #ffffff,
+      -1px 1px 0px #ffffff,
+      1px -1px 0px #ffffff,
+      -1px -1px 0px #ffffff,
+      1px 0px 0px #ffffff,
+      0px 1px 0px #ffffff,
+      -1px 0px 0px #ffffff,
+      0px -1px 0px #ffffff;
+    /* 文字の影 */
+  }
+
+  /*中*/
+  .f12 {
+    font-size: 12px;
+    text-align: center;
+    color: #000000;
+    /* 文字の影 */
+    background: #117e28;
+    text-shadow:
+      1px 1px 0px #ffffff,
+      -1px 1px 0px #ffffff,
+      1px -1px 0px #ffffff,
+      -1px -1px 0px #ffffff,
+      1px 0px 0px #ffffff,
+      0px 1px 0px #ffffff,
+      -1px 0px 0px #ffffff,
+      0px -1px 0px #ffffff;
+    /* 文字の影 */
+  }
+}
+
+
 .factorNumCell{
   text-align: center;
   width: 6%;

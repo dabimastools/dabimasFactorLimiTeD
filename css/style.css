@@ -26,7 +26,7 @@ header {
 }
 
 main {
-  border: 1px solid #AA0000;
+  /* border: 1px solid #AA0000; */
   box-sizing: border-box;
 }
 
@@ -114,7 +114,7 @@ table.table_footer_main td span{
   border-bottom: 1px solid #DDDDDD;
 }
 
-
+/* 小さいケータイ */
 .father_0 {
   background-color: #3e499c;
   color: #FFFFFF;
@@ -132,7 +132,8 @@ table.table_footer_main td span{
   border-top: 1px solid #FFFFFF;
   border-right: 1px solid #FFFFFF;
   vertical-align: middle;
-  font-size: small;
+  font-size: 10px;
+  width: 12px;
   text-align: center;
   font-weight: bold;
 }
@@ -153,7 +154,8 @@ table.table_footer_main td span{
   border-bottom: none;
   border-top: 1px solid #FFFFFF;
   vertical-align: middle;
-  font-size: small;
+  font-size: 10px;
+  width: 12px;
   text-align: center;
   font-weight: bold;
 }
@@ -174,7 +176,8 @@ table.table_footer_main td span{
   border-top: none;
   border-right: 1px solid #FFFFFF;
   vertical-align: middle;
-  font-size: small;
+  font-size: 10px;
+  width: 12px;
   text-align: center;
   font-weight: bold;
 }
@@ -196,7 +199,8 @@ table.table_footer_main td span{
   border-top: 1px solid #FFFFFF;
   border-right: 1px solid #FFFFFF;
   vertical-align: middle;
-  font-size: small;
+  font-size: 10px;
+  width: 12px;
   text-align: center;
   font-weight: bold;
 }
@@ -218,7 +222,8 @@ table.table_footer_main td span{
   border-top: 1px solid #FFFFFF;
   border-right: 1px solid #FFFFFF;
   vertical-align: middle;
-  font-size: small;
+  font-size: 10px;
+  width: 12px;
   text-align: center;
   font-weight: bold;
 }
@@ -239,9 +244,149 @@ table.table_footer_main td span{
   border-top: none;
   border-right: 1px solid #FFFFFF;
   vertical-align: middle;
-  font-size: small;
+  font-size: 10px;
+  width: 12px;
   text-align: center;
   font-weight: bold;
+}
+
+
+@media screen and (min-height: 960px) {
+  /* 小さいケータイ以外 */
+  .father_0 {
+    background-color: #3e499c;
+    color: #FFFFFF;
+    text-shadow:
+      1px 1px 0px #000000,
+      -1px 1px 0px #000000,
+      1px -1px 0px #000000,
+      -1px -1px 0px #000000,
+      1px 0px 0px #000000,
+      0px 1px 0px #000000,
+      -1px 0px 0px #000000,
+      0px -1px 0px #000000;
+    /* 文字の影 */
+    border-bottom: 0px solid #3e499c;
+    border-top: 1px solid #FFFFFF;
+    border-right: 1px solid #FFFFFF;
+    vertical-align: middle;
+    font-size: x-large;
+    width: 20px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .father {
+    background-color: #3e499c;
+    color: #FFFFFF;
+    text-shadow:
+      1px 1px 0px #000000,
+      -1px 1px 0px #000000,
+      1px -1px 0px #000000,
+      -1px -1px 0px #000000,
+      1px 0px 0px #000000,
+      0px 1px 0px #000000,
+      -1px 0px 0px #000000,
+      0px -1px 0px #000000;
+    /* 文字の影 */
+    border-bottom: none;
+    border-top: 1px solid #FFFFFF;
+    vertical-align: middle;
+    font-size: x-large;
+    width: 20px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .father_1 {
+    background-color: #3e499c;
+    color: #FFFFFF;
+    text-shadow:
+      1px 1px 0px #000000,
+      -1px 1px 0px #000000,
+      1px -1px 0px #000000,
+      -1px -1px 0px #000000,
+      1px 0px 0px #000000,
+      0px 1px 0px #000000,
+      -1px 0px 0px #000000,
+      0px -1px 0px #000000;
+    /* 文字の影 */
+    border-top: none;
+    border-right: 1px solid #FFFFFF;
+    vertical-align: middle;
+    font-size: x-large;
+    width: 20px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .mother_0 {
+    background-color: #b34e5f;
+    color: #FFFFFF;
+    text-shadow:
+      1px 1px 0px #000000,
+      -1px 1px 0px #000000,
+      1px -1px 0px #000000,
+      -1px -1px 0px #000000,
+      1px 0px 0px #000000,
+      0px 1px 0px #000000,
+      -1px 0px 0px #000000,
+      0px -1px 0px #000000;
+    /* 文字の影 */
+    border-bottom: 0px solid #b34e5f;
+    border-top: 1px solid #FFFFFF;
+    border-right: 1px solid #FFFFFF;
+    vertical-align: middle;
+    font-size: x-large;
+    width: 20px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .mother {
+    background-color: #b34e5f;
+    color: #FFFFFF;
+    text-shadow:
+      1px 1px 0px #000000,
+      -1px 1px 0px #000000,
+      1px -1px 0px #000000,
+      -1px -1px 0px #000000,
+      1px 0px 0px #000000,
+      0px 1px 0px #000000,
+      -1px 0px 0px #000000,
+      0px -1px 0px #000000;
+    /* 文字の影 */
+    border-bottom: none;
+    border-top: 1px solid #FFFFFF;
+    border-right: 1px solid #FFFFFF;
+    vertical-align: middle;
+    font-size: x-large;
+    width: 20px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .mother_1 {
+    background-color: #b34e5f;
+    color: #FFFFFF;
+    text-shadow:
+      1px 1px 0px #000000,
+      -1px 1px 0px #000000,
+      1px -1px 0px #000000,
+      -1px -1px 0px #000000,
+      1px 0px 0px #000000,
+      0px 1px 0px #000000,
+      -1px 0px 0px #000000,
+      0px -1px 0px #000000;
+    /* 文字の影 */
+    border-top: none;
+    border-right: 1px solid #FFFFFF;
+    vertical-align: middle;
+    font-size: x-large;
+    width: 20px;
+    text-align: center;
+    font-weight: bold;
+  }
 }
 
 .factor {
@@ -433,47 +578,49 @@ div.horse_spec {
   font-size: 20px;
 }
 
-@media screen and (400px > width) {
-  .styleParentLineText {
-    display: inline-block;    /* 変形するためのブロック化 */
-    transform: scale(0.8, 2.0);
-  }
-
-  .styleParentLine {
-    border-left: 0px solid;
-    border-right: 0px solid;
-    border-bottom: 1px solid #DDDDDD;
-    text-align: center;
-    font-weight: bold;
-    font-size: 10px;
-    border-collapse: collapse;
-    width: 10px;
-  }
-
-  .styleFactorClassMain {
-    text-align: center;
-    font-size: 11px;
-    font-weight: bold;
-    border-left: 0px solid;
-    border-right: 0px solid;
-    border-bottom: 1px solid #DDDDDD;
-    border-collapse: collapse;
-    width: 12px;
-  }
-
-  .styleInbreedButton {
-    border-left: 0px solid;
-    border-right: 0px solid;
-    border-bottom: 1px solid #DDDDDD;
-    text-align: center;
-    font-weight: bold;
-    font-size: 10px;
-    border-collapse: collapse;
-    width: 10px;
-  }
+/* ～400pxに適用されるCSS（スマホ小さい用） */
+.styleParentLineText {
+  display: inline-block;    /* 変形するためのブロック化 */
+  transform: scale(0.8, 2.0);
 }
-@media (400px <= width < 960px) {
-  /* 770px～959pxに適用されるCSS（スマホ大きい用） */
+
+.styleParentLine {
+  border-left: 0px solid;
+  border-right: 0px solid;
+  border-bottom: 1px solid #DDDDDD;
+  text-align: center;
+  font-weight: bold;
+  font-size: 10px;
+  border-collapse: collapse;
+  width: 16px;
+}
+
+.styleFactorClassMain {
+  text-align: center;
+  font-size: 11px;
+  font-weight: bold;
+  border-left: 0px solid;
+  border-right: 0px solid;
+  border-bottom: 1px solid #DDDDDD;
+  border-collapse: collapse;
+  width: 12px;
+}
+
+.styleInbreedButton {
+  border-left: 0px solid;
+  border-right: 0px solid;
+  border-bottom: 1px solid #DDDDDD;
+  text-align: center;
+  font-weight: bold;
+  font-size: 10px;
+  border-collapse: collapse;
+  width: 10px;
+}
+
+
+/* @media (400px <= width < 960px) { */
+@media screen and (min-width:400px) and (max-width: 960px) {
+  /* 400px～959pxに適用されるCSS（スマホ大きい用） */
   .styleParentLineText {
     display: inline-block;    /* 変形するためのブロック化 */
     transform: scale(1.0, 1.0);
@@ -514,8 +661,8 @@ div.horse_spec {
 }
 
 
-/* @media screen and (min-width: 960px) { */
-@media screen and (960px <= width) {
+/* @media screen and (960px <=width) { */
+@media screen and (min-width: 960px) {
   /* 960px以上に適用されるCSS（PC用） */
   .styleParentLineText {
     display: inline-block;    /* 変形するためのブロック化 */
@@ -575,17 +722,18 @@ div.horse_spec {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
-  width: 2%;
+  color: #fff;
+  font-size: 14px;
 }
 .f00_nitro_space{
   background: #AA0000;
   vertical-align: middle;
   text-align: center;
-  width: 2%;
+  width: 1%;
 }
 .f00_nitro_header {
   background: #AA0000;
-  height: 3px;
+  height: 2px;
 }
 
 /*header*/
@@ -607,23 +755,41 @@ div.horse_spec {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
-  width: 2%;
+  color: #fff;
+  font-size: 14px;
 }
 .f00_inbreed_space{
   background: #00ABAB;
   vertical-align: middle;
   text-align: center;
-  width: 2%;
+  width: 1%;
 }
 .f00_inbreed_header {
   background: #00ABAB;
-  height: 3px;
+  height: 2px;
 }
 
 /*因子共通*/
 .f00 { 
   font-size: 12px;
 }
+.f00_theory {
+  text-align: center;
+  width: 60px;
+  color: #000000;
+  /* 文字の影 */
+  background: #bbb;
+  text-shadow:
+    1px 1px 0px #ffffff,
+    -1px 1px 0px #ffffff,
+    1px -1px 0px #ffffff,
+    -1px -1px 0px #ffffff,
+    1px 0px 0px #ffffff,
+    0px 1px 0px #ffffff,
+    -1px 0px 0px #ffffff,
+    0px -1px 0px #ffffff;
+}
+
 @media screen and (min-width: 960px) {
   /* 960px以上に適用されるCSS（PC用） */
   .f00 { 
@@ -661,6 +827,7 @@ div.horse_spec {
 
 /*短*/
 .f01 {
+  text-align: center;
   color: #000000;
   /* 文字の影 */
   background: #fdfd00;
@@ -677,6 +844,7 @@ div.horse_spec {
 
 /*速*/
 .f02 {
+  text-align: center;
   color: #000000;
   /* 文字の影 */
   background: #fdfda2;
@@ -693,6 +861,7 @@ div.horse_spec {
 
 /*底*/
 .f03 {
+  text-align: center;
   color: #000000;
   /* 文字の影 */
   background: #fc6e00;
@@ -709,6 +878,7 @@ div.horse_spec {
 
 /*長*/
 .f04 {
+  text-align: center;
   color: #000000;
   /* 文字の影 */
   background: #03fdfd;
@@ -725,6 +895,7 @@ div.horse_spec {
 
 /*砂*/
 .f05 {
+  text-align: center;
   color: #000000;
   /* 文字の影 */
   background: #fddba5;
@@ -741,6 +912,7 @@ div.horse_spec {
 
 /*丈*/
 .f06 {
+  text-align: center;
   color: #000000;
   /* 文字の影 */
   background: #feabdd;
@@ -758,6 +930,7 @@ div.horse_spec {
 
 /*早*/
 .f07 {
+  text-align: center;
   color: #000000;
   /* 文字の影 */
   background: #02fe02;
@@ -775,6 +948,7 @@ div.horse_spec {
 
 /*晩*/
 .f08 {
+  text-align: center;
   color: #000000;
   /* 文字の影 */
   background: #a7de0d;
@@ -792,6 +966,7 @@ div.horse_spec {
 
 /*堅*/
 .f09 {
+  text-align: center;
   color: #000000;
   /* 文字の影 */
   background: #a1a1a3;
@@ -809,6 +984,7 @@ div.horse_spec {
 
 /*難*/
 .f10 {
+  text-align: center;
   color: #000000;
   /* 文字の影 */
   background: #fc00fc;
@@ -824,9 +1000,45 @@ div.horse_spec {
   /* 文字の影 */
 }
 
+/*走*/
+.f11 {
+  text-align: center;
+  color: #000000;
+  /* 文字の影 */
+  background: #f1eeea;
+  text-shadow:
+    1px 1px 0px #ffffff,
+    -1px 1px 0px #ffffff,
+    1px -1px 0px #ffffff,
+    -1px -1px 0px #ffffff,
+    1px 0px 0px #ffffff,
+    0px 1px 0px #ffffff,
+    -1px 0px 0px #ffffff,
+    0px -1px 0px #ffffff;
+  /* 文字の影 */
+}
+
+/*中*/
+.f12 {
+  text-align: center;
+  color: #000000;
+  /* 文字の影 */
+  background: #117e28;
+  text-shadow:
+    1px 1px 0px #ffffff,
+    -1px 1px 0px #ffffff,
+    1px -1px 0px #ffffff,
+    -1px -1px 0px #ffffff,
+    1px 0px 0px #ffffff,
+    0px 1px 0px #ffffff,
+    -1px 0px 0px #ffffff,
+    0px -1px 0px #ffffff;
+  /* 文字の影 */
+}
+
 .factorNumCell{
   text-align: center;
-  width: 5%;
+  width: 6%;
   font-size: 10px;
   height:18px;
 }
@@ -1188,7 +1400,7 @@ div.horse_spec {
 .table_footer_TH_theory {
   background: #bbb;
   font-size: 12px;
-  width: 30px;
+  width: 60px;
 }
 
 /* 面白 */

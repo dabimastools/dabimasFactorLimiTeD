@@ -1,11 +1,19 @@
 // cache name, cache files
 var CACHE_NAME = 'dabimas-factor-v1';
 var urlsToCache = [
-    '/yanaifarm.github.io/dabimasFactor/index.html',
-    '/yanaifarm.github.io/dabimasFactor/json/dabimasFactor.json',
-    '/yanaifarm.github.io/dabimasFactor/css/style.css',
-    '/yanaifarm.github.io/dabimasFactor/css/vuetify.min.css',
-    '/yanaifarm.github.io/dabimasFactor/css/vuetify_compact.min.css',
+    '/dabimastools.github.io/dabimasFactorLimiTeD/index.html',
+    '/dabimastools.github.io/dabimasFactorLimiTeD/json/dabimasFactor.json',
+    '/dabimastools.github.io/dabimasFactorLimiTeD/json/brosData.json',
+    '/dabimastools.github.io/dabimasFactorLimiTeD/css/style.css',
+    '/dabimastools.github.io/dabimasFactorLimiTeD/css/loading.css',
+    '/dabimastools.github.io/dabimasFactorLimiTeD/css/materialdesignicons.min.css',
+    '/dabimastools.github.io/dabimasFactorLimiTeD/css/materialdesignicons.min.css.map',
+    '/dabimastools.github.io/dabimasFactorLimiTeD/css/notosansjapanese.css',
+    '/dabimastools.github.io/dabimasFactorLimiTeD/css/vuetify_compact.min.css',
+    '/dabimastools.github.io/dabimasFactorLimiTeD/css/vuetify.min.css',
+    '/dabimastools.github.io/dabimasFactorLimiTeD/vue/vue.min.js',
+    '/dabimastools.github.io/dabimasFactorLimiTeD/vue/vuetify.js',
+    '/dabimastools.github.io/dabimasFactorLimiTeD/vue/vuetify.js.map',
 ];
 
 // install cache

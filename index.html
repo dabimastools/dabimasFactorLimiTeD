@@ -6,8 +6,13 @@
     <link rel="manifest" href="./manifest.json" />
     <link href="./css/loading.css" type="text/css" rel="stylesheet" />
     <link href="./css/style.css" type="text/css" rel="stylesheet" />
-    <link
+    <!-- <link
       href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css"
+      rel="stylesheet"
+    /> -->
+    <link
+      href="./css/materialdesignicons.min.css"
+      type="text/css"
       rel="stylesheet"
     />
     <link
@@ -118,62 +123,6 @@
           </tbody>
 
           <tbody v-if="$vuetify.breakpoint.smAndDown">
-            <!-- <tr>
-              <th rowspan="3" class="f00_nitro_space"></th>
-              <th rowspan="3" class="f00_nitro">
-                <span>ニトロ</span>
-              </th>
-              <th colspan="7" class="f00_nitro_header"></th>
-              <th rowspan="3" class="f00_inbreed_space"></th>
-              <th rowspan="3" class="f00_inbreed" @click="handleClick()">
-                <span>クロス</span>
-              </th>
-              <th colspan="7" class="f00_inbreed_header"></th>
-
-              <th rowspan="2" class="table_footer_TH_theory">理論</th>
-
-              <th
-                rowspan="3"
-                width="9%"
-                @click="initializer()"
-                style="background-color: #aa0000"
-              >
-                <v-icon size="x-large" color="white">mdi-reload</v-icon>
-              </th>
-            </tr>
-            <tr class="f00">
-              <th class="f01">短</th>
-              <th class="f02">速</th>
-              <th class="f03">底</th>
-              <th class="f04">長</th>
-              <th class="f07">晩</th>
-              <th class="f09">堅</th>
-              <th class="f10">難</th>
-              <th class="f01">短</th>
-              <th class="f02">速</th>
-              <th class="f03">底</th>
-              <th class="f04">長</th>
-              <th class="f07">晩</th>
-              <th class="f09">堅</th>
-              <th class="f10">難</th>
-            </tr>
-            <tr>
-              <th class="factorNumCell">{{factorNumtoString[0]}}</th>
-              <th class="factorNumCell">{{factorNumtoString[1]}}</th>
-              <th class="factorNumCell">{{factorNumtoString[2]}}</th>
-              <th class="factorNumCell">{{factorNumtoString[3]}}</th>
-              <th class="factorNumCell">{{factorNumtoString[7]}}</th>
-              <th class="factorNumCell">{{factorNumtoString[8]}}</th>
-              <th class="factorNumCell">{{factorNumtoString[9]}}</th>
-              <th class="factorNumCell">{{inbreedFactorNumtoString[0]}}</th>
-              <th class="factorNumCell">{{inbreedFactorNumtoString[1]}}</th>
-              <th class="factorNumCell">{{inbreedFactorNumtoString[2]}}</th>
-              <th class="factorNumCell">{{inbreedFactorNumtoString[3]}}</th>
-              <th class="factorNumCell">{{inbreedFactorNumtoString[7]}}</th>
-              <th class="factorNumCell">{{inbreedFactorNumtoString[8]}}</th>
-              <th class="factorNumCell">{{inbreedFactorNumtoString[9]}}</th>
-              <th :class="styleThoeryClass"></th>
-            </tr> -->
             <tr>
               <td width="1%"></td>
               <td width="13%"></td>
@@ -229,63 +178,6 @@
               <td class="factorNumCell">{{inbreedFactorNumtoString[10]}}</td>
               <td class="factorNumCell">{{inbreedFactorNumtoString[11]}}</td>
             </tr>            <!-- ここから下がいらない -->
-            <!-- <tr>
-              
-              <th rowspan="3" class="f00_nitro_space"></th>
-              <th rowspan="3" class="f00_nitro">
-                <span>ニトロ</span>
-              </th>
-              <th colspan="7" class="f00_nitro_header"></th>
-              <th rowspan="3" class="f00_inbreed_space"></th>
-              <th rowspan="3" class="f00_inbreed" @click="handleClick()">
-                <span>クロス</span>
-              </th>
-              <th colspan="7" class="f00_inbreed_header"></th>
-
-              <th rowspan="2" class="table_footer_TH_theory">理論</th>
-
-              <th
-                rowspan="3"
-                width="9%"
-                @click="initializer()"
-                style="background-color: #aa0000"
-              >
-                <v-icon size="x-large" color="white">mdi-reload</v-icon>
-              </th>
-            </tr>
-            <tr class="f00">
-              <th class="f01">短</th>
-              <th class="f02">速</th>
-              <th class="f03">底</th>
-              <th class="f04">長</th>
-              <th class="f07">晩</th>
-              <th class="f09">堅</th>
-              <th class="f10">難</th>
-              <th class="f01">短</th>
-              <th class="f02">速</th>
-              <th class="f03">底</th>
-              <th class="f04">長</th>
-              <th class="f07">晩</th>
-              <th class="f09">堅</th>
-              <th class="f10">難</th>
-            </tr>
-            <tr>
-              <th class="factorNumCell">{{factorNumtoString[0]}}</th>
-              <th class="factorNumCell">{{factorNumtoString[1]}}</th>
-              <th class="factorNumCell">{{factorNumtoString[2]}}</th>
-              <th class="factorNumCell">{{factorNumtoString[3]}}</th>
-              <th class="factorNumCell">{{factorNumtoString[7]}}</th>
-              <th class="factorNumCell">{{factorNumtoString[8]}}</th>
-              <th class="factorNumCell">{{factorNumtoString[9]}}</th>
-              <th class="factorNumCell">{{inbreedFactorNumtoString[0]}}</th>
-              <th class="factorNumCell">{{inbreedFactorNumtoString[1]}}</th>
-              <th class="factorNumCell">{{inbreedFactorNumtoString[2]}}</th>
-              <th class="factorNumCell">{{inbreedFactorNumtoString[3]}}</th>
-              <th class="factorNumCell">{{inbreedFactorNumtoString[7]}}</th>
-              <th class="factorNumCell">{{inbreedFactorNumtoString[8]}}</th>
-              <th class="factorNumCell">{{inbreedFactorNumtoString[9]}}</th>
-              <th :class="styleThoeryClass"></th>
-            </tr> -->
           </tbody>
         </table>
       </header>
@@ -298,15 +190,37 @@
             <!-- xsを設定できないので↓のようなカンジで -->
             <v-col sm="12" md="6" lg="6" xl="6" cols="12">
               <v-card elevation="3" align-content="center" class="custom-card">
-                <v-card-title
+                <!-- <v-card-title
                   v-if="this.windowSize >= 770"
                   style="font-size: 16px; font-weight: bolder"
                   class="px-0"
                   outlined
                 >
                   種牡馬検索
-                </v-card-title>
-
+                </v-card-title> -->
+                <v-row no-gutters>
+                  <v-col cols="3">
+                    <v-card-title
+                      v-if="this.windowSize >= 770"
+                      style="font-size: 16px; font-weight: bolder d-flex justify-center fill-height"
+                      class="px-0"
+                      outlined
+                      >
+                      種牡馬検索
+                    </v-card-title>
+                  </v-col>
+                  <v-col mt-0>
+                    <v-text-field
+                      v-model="this.inputedMemoStallion"
+                      @change="memoChangeStallion($event)"
+                      v-if="this.windowSize >= 770"
+                      label="メモ"
+                      dense
+                      single-line
+                      style="font-size: 10px;"
+                    ></v-text-field>
+                  </v-col>
+                </v-row>
                 <table class="table_main">
                   <tr>
                     <!-- <div :index="0"> -->
@@ -320,6 +234,8 @@
                         :on-change="onChange"
                         :disp-category="dispCategory"
                         :category="category"
+                        :inputed="inputed"
+                        :memo-change="memoChange"
                       ></common-autocomplete>
                     </td>
 
@@ -378,6 +294,8 @@
                         :on-change="onChange"
                         :disp-category="dispCategory"
                         :category="category"
+                        :inputed="inputed"
+                        :memo-change="memoChange"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[1]">
@@ -443,6 +361,8 @@
                         :on-change="onChange"
                         :disp-category="dispCategory"
                         :category="category"
+                        :inputed="inputed"
+                        :memo-change="memoChange"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[2]">
@@ -508,6 +428,8 @@
                         :on-change="onChange"
                         :disp-category="dispCategory"
                         :category="category"
+                        :inputed="inputed"
+                        :memo-change="memoChange"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[4]">
@@ -566,6 +488,8 @@
                         :on-change="onChange"
                         :disp-category="dispCategory"
                         :category="category"
+                        :inputed="inputed"
+                        :memo-change="memoChange"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[8]">
@@ -624,6 +548,8 @@
                         :on-change="onChange"
                         :disp-category="dispCategory"
                         :category="category"
+                        :inputed="inputed"
+                        :memo-change="memoChange"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[9]">
@@ -684,6 +610,8 @@
                         :on-change="onChange"
                         :disp-category="dispCategory"
                         :category="category"
+                        :inputed="inputed"
+                        :memo-change="memoChange"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[5]">
@@ -745,6 +673,8 @@
                         :on-change="onChange"
                         :disp-category="dispCategory"
                         :category="category"
+                        :inputed="inputed"
+                        :memo-change="memoChange"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[10]">
@@ -803,6 +733,8 @@
                         :on-change="onChange"
                         :disp-category="dispCategory"
                         :category="category"
+                        :inputed="inputed"
+                        :memo-change="memoChange"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[11]">
@@ -863,6 +795,8 @@
                         :on-change="onChange"
                         :disp-category="dispCategory"
                         :category="category"
+                        :inputed="inputed"
+                        :memo-change="memoChange"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[3]">
@@ -924,6 +858,8 @@
                         :on-change="onChange"
                         :disp-category="dispCategory"
                         :category="category"
+                        :inputed="inputed"
+                        :memo-change="memoChange"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[6]">
@@ -982,6 +918,8 @@
                         :on-change="onChange"
                         :disp-category="dispCategory"
                         :category="category"
+                        :inputed="inputed"
+                        :memo-change="memoChange"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[12]">
@@ -1040,6 +978,8 @@
                         :on-change="onChange"
                         :disp-category="dispCategory"
                         :category="category"
+                        :inputed="inputed"
+                        :memo-change="memoChange"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[13]">
@@ -1100,6 +1040,8 @@
                         :on-change="onChange"
                         :disp-category="dispCategory"
                         :category="category"
+                        :inputed="inputed"
+                        :memo-change="memoChange"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[7]">
@@ -1161,6 +1103,8 @@
                         :on-change="onChange"
                         :disp-category="dispCategory"
                         :category="category"
+                        :inputed="inputed"
+                        :memo-change="memoChange"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[14]">
@@ -1219,6 +1163,8 @@
                         :on-change="onChange"
                         :disp-category="dispCategory"
                         :category="category"
+                        :inputed="inputed"
+                        :memo-change="memoChange"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[15]">
@@ -1271,15 +1217,37 @@
             <!-- xsを設定できないので↓のようなカンジで -->
             <v-col sm="12" md="6" lg="6" xl="6" cols="12">
               <v-card elevation="3" align-content="center" class="custom-card">
-                <v-card-title
+                <!-- <v-card-title
                   v-if="this.windowSize >= 770"
                   style="font-size: 16px; font-weight: bolder"
                   class="px-0"
                   outlined
                 >
                   繫殖牝馬検索
-                </v-card-title>
-
+                </v-card-title> -->
+                <v-row no-gutters>
+                  <v-col cols="4" class="d-flex align-center fill-height">
+                    <v-card-title
+                      v-if="this.windowSize >= 770"
+                      style="font-size: 16px; font-weight: bolder d-flex justify-center fill-height"
+                      class="px-0"
+                      outlined
+                    >
+                      繫殖牝馬検索
+                    </v-card-title>
+                  </v-col>
+                  <v-col mt-0>
+                    <v-text-field
+                      v-model="this.inputedMemoBroodmare"
+                      @change="memoChangeBroodmare($event)"
+                      v-if="this.windowSize >= 770"
+                      label="メモ"
+                      dense
+                      single-line
+                      style="font-size: 10px;"
+                    ></v-text-field>
+                  </v-col>
+                </v-row>
                 <!-- 繫殖牝馬側 -->
                 <table class="table_main">
                   <tr>
@@ -1294,6 +1262,8 @@
                         :on-change="onChange"
                         :disp-category="dispCategory"
                         :category="category"
+                        :inputed="inputed"
+                        :memo-change="memoChange"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[0 + 16]">
@@ -1329,15 +1299,6 @@
                         ><v-icon>mdi-heart</v-icon></v-btn
                       >
                     </td>
-                    <!-- <td :class="styleFactorClasses[0 + 16][0]">
-                      {{factorName[0 + 16][0]}}
-                    </td>
-                    <td :class="styleFactorClasses[0 + 16][1]">
-                      {{factorName[0 + 16][1]}}
-                    </td>
-                    <td :class="styleFactorClasses[0 + 16][2]">
-                      {{factorName[0 + 16][2]}}
-                    </td> -->
                     <td colspan="3" :class="styleFactorClasses[0 + 16][0]">
                       <v-btn v-if="$vuetify.breakpoint.mdAndUp" variant="outlined" @click="handleClick()">{{dispButtonName}}</v-btn>
                       <v-btn v-if="$vuetify.breakpoint.smAndDown" variant="outlined" x-small @click="handleClick()">{{dispButtonName}}</v-btn>
@@ -1357,6 +1318,8 @@
                         :on-change="onChange"
                         :disp-category="dispCategory"
                         :category="category"
+                        :inputed="inputed"
+                        :memo-change="memoChange"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[1 + 16]">
@@ -1422,6 +1385,8 @@
                         :on-change="onChange"
                         :disp-category="dispCategory"
                         :category="category"
+                        :inputed="inputed"
+                        :memo-change="memoChange"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[2 + 16]">
@@ -1487,6 +1452,8 @@
                         :on-change="onChange"
                         :disp-category="dispCategory"
                         :category="category"
+                        :inputed="inputed"
+                        :memo-change="memoChange"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[4 + 16]">
@@ -1547,6 +1514,8 @@
                         :on-change="onChange"
                         :disp-category="dispCategory"
                         :category="category"
+                        :inputed="inputed"
+                        :memo-change="memoChange"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[8 + 16]">
@@ -1607,6 +1576,8 @@
                         :on-change="onChange"
                         :disp-category="dispCategory"
                         :category="category"
+                        :inputed="inputed"
+                        :memo-change="memoChange"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[9 + 16]">
@@ -1667,12 +1638,12 @@
                         :on-change="onChange"
                         :disp-category="dispCategory"
                         :category="category"
+                        :inputed="inputed"
+                        :memo-change="memoChange"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[5 + 16]">
-                      <span class="styleParentLineText"
-                        >{{parentLines[5 + 16]}}</span
-                      >
+                      <span class="styleParentLineText">{{parentLines[5 + 16]}}</span>
                     </td>
                     <td :class="styleInbreedButtonClasses[5 + 16]">
                       <v-btn
@@ -1728,6 +1699,8 @@
                         :on-change="onChange"
                         :disp-category="dispCategory"
                         :category="category"
+                        :inputed="inputed"
+                        :memo-change="memoChange"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[10 + 16]">
@@ -1788,6 +1761,8 @@
                         :on-change="onChange"
                         :disp-category="dispCategory"
                         :category="category"
+                        :inputed="inputed"
+                        :memo-change="memoChange"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[11 + 16]">
@@ -1848,6 +1823,8 @@
                         :on-change="onChange"
                         :disp-category="dispCategory"
                         :category="category"
+                        :inputed="inputed"
+                        :memo-change="memoChange"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[3 + 16]">
@@ -1909,6 +1886,8 @@
                         :on-change="onChange"
                         :disp-category="dispCategory"
                         :category="category"
+                        :inputed="inputed"
+                        :memo-change="memoChange"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[6 + 16]">
@@ -1969,6 +1948,8 @@
                         :on-change="onChange"
                         :disp-category="dispCategory"
                         :category="category"
+                        :inputed="inputed"
+                        :memo-change="memoChange"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[12 + 16]">
@@ -2029,6 +2010,8 @@
                         :on-change="onChange"
                         :disp-category="dispCategory"
                         :category="category"
+                        :inputed="inputed"
+                        :memo-change="memoChange"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[13 + 16]">
@@ -2089,6 +2072,8 @@
                         :on-change="onChange"
                         :disp-category="dispCategory"
                         :category="category"
+                        :inputed="inputed"
+                        :memo-change="memoChange"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[7 + 16]">
@@ -2150,6 +2135,8 @@
                         :on-change="onChange"
                         :disp-category="dispCategory"
                         :category="category"
+                        :inputed="inputed"
+                        :memo-change="memoChange"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[14 + 16]">
@@ -2210,12 +2197,12 @@
                         :on-change="onChange"
                         :disp-category="dispCategory"
                         :category="category"
+                        :inputed="inputed"
+                        :memo-change="memoChange"
                       ></common-autocomplete>
                     </td>
                     <td :class="styleParentLineClasses[15 + 16]">
-                      <span class="styleParentLineText"
-                        >{{parentLines[15 + 16]}}</span
-                      >
+                      <span class="styleParentLineText">{{parentLines[15 + 16]}}</span>
                     </td>
                     <td :class="styleInbreedButtonClasses[15 + 16]">
                       <v-btn
@@ -2265,8 +2252,8 @@
     </v-app>
   </body>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.7.14/vue.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script src="./vue/vue.min.js"></script>
+  <script src="./vue/vuetify.js"></script>
 
   <script>
     //loadingAnimation
@@ -2369,24 +2356,17 @@
     `,
       computed: {
         styleFactorClass1(newValue) {
-          // return newValue.styleParentLineClasses[this.index];
-          console.log(newValue.index);
           return "factor_omoshiro styleFactorClassMain";
         },
         styleFactorClass2(newValue) {
-          // return newValue.styleParentLineClasses[this.index];
-          console.log(newValue.index);
           return "factor_omoshiro styleFactorClassMain";
         },
         styleFactorClass3(newValue) {
-          // return newValue.styleParentLineClasses[this.index];
-          console.log(newValue.index);
           if (newValue.index === 1) {
             return "factor_omoshiro styleFactorClassMain";
           }
         },
         styleParentLineClass(newValue) {
-          // return newValue.styleParentLineClasses[this.index];
           return "factor_omoshiro styleParentLine";
         },
       },
@@ -2442,18 +2422,33 @@
               <v-list-item-title v-html="getHorse(data.item)"></v-list-item-title>
             </v-list-item-content>
           </template>
-		    </template>
+        </template>
       </v-autocomplete>
-      <v-text-field
-        v-else
-        :value="category[index]"
-        solo
-        readonly
-      ></v-text-field>
-    `,
+      <v-row no-gutters v-else>
+        <v-col :style="getWidth(index,0)">
+          <v-text-field
+            :value="category[index]"
+            solo
+            readonly
+          ></v-text-field>
+        </v-col>
+        <v-col :style="getWidth(index,1)">
+          <v-text-field
+            placeholder="メモ入力"
+            :value="inputed[index]"
+            @change="memoChange(index, $event)"
+            solo
+          ></v-text-field>
+        </v-col>
+      </v-row>
+    </div>    `,
       props: {
         index: {
           type: Number,
+          required: true,
+        },
+        inputed: {
+          type: Array,
           required: true,
         },
         selected: {
@@ -2468,6 +2463,10 @@
           type: Function,
           required: true,
         },
+        memoChange: {
+          type: Function,
+          required: true,
+        },
         dispCategory: {
           type: Number,
           required: true,
@@ -2478,6 +2477,44 @@
         },
       },
       methods: {
+        getWidth(index, type) {
+          let coefficient = 0;
+          switch (index % 16) {
+            case 0:
+              coefficient = 0;
+              break;
+            case 1:
+              coefficient = 1;
+              break;
+            case 2:
+            case 3:
+              coefficient = 2;
+              break;
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+              coefficient = 3;
+              break;
+            default:
+              coefficient = 4;
+              break;
+          }
+
+          // コンテンツ（デバイス）の高さで幅を変えるロジック
+          const width = window.innerHeight >= 960 ? 20 : 12;
+
+          const adjustment = coefficient * width;
+          if (type === 0) {
+            // 左側カラム: (100% - adjustment) / 2
+            return { maxWidth: `calc(100% - calc((100% + ${adjustment}px) * 0.35 ))` };
+          } else {
+            // 右側カラム: 残りの幅
+            return { maxWidth: `calc((100% + ${adjustment}px) * 0.35 )` };
+          }
+
+
+        },
         getHorse(horse) {
           if (!horse?.disabled) {
             return horse.name + horse.subName + this.getFactor(horse.factors);
@@ -2498,6 +2535,11 @@
         },
       },
       computed: {
+        computedStyle(newValue) {
+          return {
+            maxWidth: `calc(50% + ${this.getOffset(newValue.index)}px)`
+          };
+        },
         placeholderText(newValue) {
           if (
             Math.floor(newValue.index / 16) === 1 &&
@@ -2604,6 +2646,12 @@
       data() {
         return {
           windowSize: 0,
+          // メモの
+          inputed: Array.from(new Array(32).fill(null)),
+          // メモ種牡馬
+          inputedMemoStallion: null,
+          // メモ繫殖牝馬
+          inputedMemoBroodmare: null,
           dispColor: Array.from(new Array(32).fill("")),
           horseDataLists: [[], [], []],
           factorCd: Array.from(new Array(32), () => new Array(3).fill("00")),
@@ -2618,6 +2666,8 @@
           broodmaresBase: [],
           theoryOmoshiro: [1, 3, 5, 7],
           theoryMigoto: [9, 11, 13, 15],
+          // 全兄弟
+          brosData:[],
 
           // インブリードボタン押下フラグを一次元配列で定義（-1：未クリック　1：クリック　0:使用不可）
           isInbreedButtonClicked: Array.from(new Array(32).fill(0)),
@@ -2633,10 +2683,8 @@
           // styleParentLineClassesを一次元配列で定義
           styleParentLineClasses: Array.from(new Array(32).fill("")),
           // 合計因子数表示（走中因子も）
-          //factorNumtoString: Array.from(new Array(10).fill("00")),
           factorNumtoString: Array.from(new Array(12).fill("00")),
           // インブリードされた因子数表示（走長因子も）
-          //inbreedFactorNumtoString: Array.from(new Array(10).fill("00")),
           inbreedFactorNumtoString: Array.from(new Array(12).fill("00")),
           // 子系統数
           categoryNumtoString: "00",
@@ -2656,6 +2704,7 @@
           inbreedList: Array.from(new Array(32).fill(null)),
           reload: 0,
           size: {},
+
         };
       },
       watch: {
@@ -2752,7 +2801,22 @@
               if (JSON.parse(localStorage.getItem("dabimasFactor"))) {
                 // localStorageに入れていたものを復元する
                 this.restoreInputData();
-              }
+              };
+              if (JSON.parse(localStorage.getItem("dabimasMemo"))) {
+                // localStorageに入れていたものを復元する
+                const parseArray = JSON.parse(localStorage.getItem("dabimasMemo"));
+                this.inputed = parseArray;
+              };
+              if (localStorage.getItem("dabimasMemoStallion")) {
+                // localStorageに入れていたものを復元する
+                this.inputedMemoStallion = localStorage.getItem("dabimasMemoStallion");
+              };
+              if (localStorage.getItem("dabimasMemoBroodmare")) {
+                // localStorageに入れていたものを復元する
+                const parseArray = localStorage.getItem("dabimasMemoBroodmare");
+                this.inputedMemoBroodmare = parseArray;
+              };
+
             }
           });
         },
@@ -2802,9 +2866,7 @@
           ];
           this.horseDataLists = [this.horses, this.stallions, this.broodmares];
           this.selected = JSON.parse(localStorage.getItem("dabimasFactor"));
-          this.category = JSON.parse(
-            localStorage.getItem("dabimasFactorCategory")
-          );
+          this.category = JSON.parse(localStorage.getItem("dabimasFactorCategory"));
 
           // 因子・親系統を詰める
           this.selected.map((element, index) => {
@@ -2839,9 +2901,17 @@
         initializer() {
           // localStorageをクリア
           localStorage.removeItem("dabimasFactor");
+          localStorage.removeItem("dabimasMemo");
+          localStorage.removeItem("dabimasMemoStallion");
+          localStorage.removeItem("dabimasMemoBroodmare");
 
           this.selected = Array.from(new Array(32).fill(null));
           this.category = Array.from(new Array(32).fill(null));
+          // memo欄
+          this.inputed = Array.from(new Array(32).fill(null));
+          this.inputedMemoStallion = null;
+          this.inputedMemoBroodmare = null;
+
           this.dispColor = Array.from(new Array(32).fill(""));
           // baseをコピーする
           this.stallions = [...this.stallionsBase];
@@ -2972,6 +3042,28 @@
               // 保存されていた場合はリストア処理を行う
               this.c4();
             });
+
+            // 全兄弟データを読み込む
+            fetch("./json/brosData.json")
+            .then((response) => {
+              return response.json();
+            })
+            .then((json) => {
+              // jsonから取得
+              this.brosData = json.brosData;
+            });
+        },
+        memoChange: function (index, input) {
+          this.$set(this.inputed, index, event.target.value);
+          localStorage.setItem("dabimasMemo", JSON.stringify(this.inputed));
+        },
+        memoChangeStallion: function (input) {
+          this.inputedMemoStallion = input;
+          localStorage.setItem("dabimasMemoStallion", this.inputedMemoStallion);
+        },
+        memoChangeBroodmare: function (input) {
+          this.inputedMemoBroodmare = input;
+          localStorage.setItem("dabimasMemoBroodmare", this.inputedMemoBroodmare);
         },
         // ドロップダウンリスト選択時
         // onChange: function (sex, id, horseData, event) {
@@ -3107,7 +3199,6 @@
             // インブリードボタンクリック済フラグを未クリックに設定
             this.isInbreedButtonClicked = Array.from(new Array(32).fill(-1));
             // インブリード判定処理のメイン
-            // retInbreedArray = this.judgeInbreed();
             retInbreedCount = this.judgeInbreed();
           } else {
             // インブリードボタンクリック済フラグを非活性モードに設定
@@ -3116,7 +3207,6 @@
             // インブリードの色も初期化
             this.dispColor = Array.from(new Array(32).fill(""));
             // インブリード因子数表示（中長因子も）
-            //this.inbreedFactorNumtoString = Array.from(new Array(10).fill("00"));
             this.inbreedFactorNumtoString = Array.from(new Array(12).fill("00"));
             // インブリードされているところを格納する変数
             this.inbreedList = Array.from(new Array(32).fill(null));
@@ -3202,8 +3292,6 @@
           let checkResultInbreed = Array.from(new Array(32).fill(null));
 
           let i = 0;
-          //   // 相手の取得（配列の添え字が0なら1で、1なら0の値を取得する）
-          //   const partnerArray = allArray[Math.abs(~j)];
 
           for (const horse of broodmaresArray) {
             // インブリード判定を除外する要素を格納する
@@ -3235,28 +3323,29 @@
             );
 
             if (tmpInbreedAllBrothers.length > 0) {
+              const inbreedPairId = crypto.randomUUID();
               // 種側に姉妹・肌側に兄弟がいた場合
               for (const tmpInbreed of tmpInbreedAllBrothers) {
                 // インブリードがある場合
                 // 種牡馬のキューを取得する
-                const tmpOverWriteQue = [
-                  ...overWriteQue,
-                  this.getCellIdQue(tmpInbreed.ownIndex, stallionsArray),
-                ];
-                overWriteQue = tmpOverWriteQue.flat(1);
+                // const tmpOverWriteQue = [
+                //   ...overWriteQue,
+                //   this.getCellIdQue(tmpInbreed.ownIndex, stallionsArray),
+                // ];
+                // overWriteQue = tmpOverWriteQue.flat(1);
 
                 // 繫殖牝馬のキューを取得する
-                const tmpOverWriteQueMare = [
-                  ...overWriteQueMare,
-                  this.getCellIdQue(horse.ownIndex, broodmaresArray),
-                ];
-                overWriteQueMare = tmpOverWriteQueMare.flat(1);
+                // const tmpOverWriteQueMare = [
+                //   ...overWriteQueMare,
+                //   this.getCellIdQue(horse.ownIndex, broodmaresArray),
+                // ];
+                // overWriteQueMare = tmpOverWriteQueMare.flat(1);
 
                 // 相手側（種牡馬側）のインブリード配列にセットする（ただし牝馬なので赤くしない）
-                checkResultInbreed[tmpInbreed.ownIndex] = {
-                  ...tmpInbreed,
-                  toRed: false,
-                };
+                // checkResultInbreed[tmpInbreed.ownIndex] = {
+                //   ...tmpInbreed,
+                //   toRed: false,
+                // };
 
                 // 他のところで同じお姉ちゃんを使っている判定をしたいんだけど、いったんコメントアウト
                 // 相手側（種牡馬側）でクロスした先祖が他にもいないのか確認してセットする
@@ -3267,22 +3356,25 @@
               }
 
               // 判定を行わないための上書きする（種牡馬）
-              for (const overWriteIndex of overWriteQue) {
-                // horseArray[overWriteIndex].selectedHorse = horse.name;
-                stallionsArray[overWriteIndex].selectedHorse = horse.name;
-              }
+              // for (const overWriteIndex of overWriteQue) {
+              //   // horseArray[overWriteIndex].selectedHorse = horse.name;
+              //   stallionsArray[overWriteIndex].selectedHorse = horse.name;
+              // }
               // 判定を行わないための上書きする（繁殖牝馬）
-              for (const overWriteIndex of overWriteQueMare) {
-                // horseArray[overWriteIndex].selectedHorse = horse.name;
-                broodmaresArray[overWriteIndex].selectedHorse = horse.name;
-              }
+              // for (const overWriteIndex of overWriteQueMare) {
+              //   // horseArray[overWriteIndex].selectedHorse = horse.name;
+              //   broodmaresArray[overWriteIndex].selectedHorse = horse.name;
+              // }
 
               // 自分でクロスしたとこのインブリード配列にセットする
-              checkResultInbreed[horse.ownIndex + 16] = horse;
+              checkResultInbreed[horse.ownIndex + 16] = {...horse,inbreedPairId:inbreedPairId};
             }
           }
 
           for (const horse of stallionsArray) {
+            if (horse === undefined) {
+              break;
+            }
             overWriteQue = [];
             overWriteQueMare = [];
             // チェック２
@@ -3309,45 +3401,45 @@
             );
 
             if (tmpInbreedAllSisters.length > 0) {
+              const inbreedPairId = crypto.randomUUID();
               for (const tmpInbreed of tmpInbreedAllSisters) {
                 // 肌側に姉妹がいた場合
                 // インブリードがある場合は先頭1件のみ取得する
                 // ↑のロジックだと全姉妹の祖先も抽出されてしまうため、先頭のみ取りたい
                 // 種牡馬のキューを取得する
-                const tmpOverWriteQue = [
-                  ...overWriteQue,
-                  this.getCellIdQue(horse.ownIndex, stallionsArray),
-                ];
-                overWriteQue = tmpOverWriteQue.flat(1);
+                // const tmpOverWriteQue = [
+                //   ...overWriteQue,
+                //   this.getCellIdQue(horse.ownIndex, stallionsArray),
+                // ];
+                // overWriteQue = tmpOverWriteQue.flat(1);
 
                 // 繫殖牝馬のキューを取得する
-                const tmpOverWriteQueMare = [
-                  ...overWriteQueMare,
-                  this.getCellIdQue(
-                    tmpInbreedAllSisters[0].ownIndex,
-                    broodmaresArray
-                  ),
-                ];
-                overWriteQueMare = tmpOverWriteQueMare.flat(1);
+                // const tmpOverWriteQueMare = [
+                //   ...overWriteQueMare,
+                //   this.getCellIdQue(
+                //     tmpInbreedAllSisters[0].ownIndex,
+                //     broodmaresArray
+                //   ),
+                // ];
+                // overWriteQueMare = tmpOverWriteQueMare.flat(1);
 
                 // 相手側のインブリード配列にセットする（ただし赤くしない）
-                checkResultInbreed[tmpInbreed.ownIndex + 16] = {
-                  ...tmpInbreed,
-                  toRed: false,
-                };
+                // checkResultInbreed[tmpInbreed.ownIndex + 16] = {
+                //   ...tmpInbreed,
+                //   toRed: false,
+                // };
               }
 
               // 判定を行わないための上書きする（種牡馬）
-              for (const overWriteIndex of overWriteQue) {
-                // horseArray[overWriteIndex].selectedHorse = horse.name;
-                stallionsArray[overWriteIndex].selectedHorse = horse.name;
-              }
+              // for (const overWriteIndex of overWriteQue) {
+              //   // horseArray[overWriteIndex].selectedHorse = horse.name;
+              //   stallionsArray[overWriteIndex].selectedHorse = horse.name;
+              // }
               // 判定を行わないための上書きする（繁殖牝馬）
-              for (const overWriteIndex of overWriteQueMare) {
-                // horseArray[overWriteIndex].selectedHorse = horse.name;
-                broodmaresArray[overWriteIndex].selectedHorse = horse.name;
-              }
-
+              // for (const overWriteIndex of overWriteQueMare) {
+              //   // horseArray[overWriteIndex].selectedHorse = horse.name;
+              //   broodmaresArray[overWriteIndex].selectedHorse = horse.name;
+              // }
               // // 自分側でクロスした先祖が他にもいないのか確認する
               const otherInbreedArray = stallionsArray.filter(
                 (stallion) =>
@@ -3356,10 +3448,10 @@
               );
               for (const otherInbreed of otherInbreedArray) {
                 // 自分側でほかのとこのインブリード配列にセットする
-                checkResultInbreed[otherInbreed.ownIndex] = otherInbreed;
+                checkResultInbreed[otherInbreed.ownIndex] = {...tmpInbreed,inbreedPairId:inbreedPairId};
               }
               // 自分でクロスしたとこのインブリード配列にセットする
-              checkResultInbreed[horse.ownIndex] = horse;
+              checkResultInbreed[horse.ownIndex] = {...horse,inbreedPairId:inbreedPairId};
             }
 
             overWriteQue = [];
@@ -3380,26 +3472,30 @@
                 (partner.fullBrothers.some((value) => value === horse.name) &&
                   partner.selectedHorse !== horse.selectedHorse)
             );
-
+            
             if (tmpAllBrotherInbreedArray.length > 0) {
+              const inbreedPairId = crypto.randomUUID();
               for (const tmpInbreed of tmpAllBrotherInbreedArray) {
                 // インブリードがある場合
                 // 種牡馬のキューを取得する
-                const tmpOverWriteQue = [
-                  ...overWriteQue,
-                  this.getCellIdQue(horse.ownIndex, stallionsArray),
-                ];
-                overWriteQue = tmpOverWriteQue.flat(1);
+                // const tmpOverWriteQue = [
+                //   ...overWriteQue,
+                //   this.getCellIdQue(horse.ownIndex, stallionsArray),
+                // ];
+                // overWriteQue = tmpOverWriteQue.flat(1);
 
                 // 繫殖牝馬のキューを取得する
-                const tmpOverWriteQueMare = [
-                  ...overWriteQueMare,
-                  this.getCellIdQue(tmpInbreed.ownIndex, broodmaresArray),
-                ];
-                overWriteQueMare = tmpOverWriteQueMare.flat(1);
+                // const tmpOverWriteQueMare = [
+                //   ...overWriteQueMare,
+                //   this.getCellIdQue(tmpInbreed.ownIndex, broodmaresArray),
+                // ];
+                // overWriteQueMare = tmpOverWriteQueMare.flat(1);
 
                 // 相手側のインブリード配列にセットする
-                checkResultInbreed[tmpInbreed.ownIndex + 16] = tmpInbreed;
+                // checkResultInbreed[tmpInbreed.ownIndex + 16] = tmpInbreed;
+                if (!checkResultInbreed[tmpInbreed.ownIndex + 16]) {
+                  checkResultInbreed[tmpInbreed.ownIndex + 16] = {...tmpInbreed,inbreedPairId:inbreedPairId};
+                };
 
                 // 相手側でクロスした先祖が他にもいないのか確認してセットする
                 const otherInbreedArray = broodmaresArray.filter(
@@ -3408,50 +3504,84 @@
                     broodmare.ownIndex !== tmpInbreed.ownIndex
                 );
                 for (const otherInbreed of otherInbreedArray) {
-                  checkResultInbreed[otherInbreed.ownIndex + 16] = otherInbreed;
+                  if (!checkResultInbreed[tmpInbreed.ownIndex + 16]) {
+                    checkResultInbreed[otherInbreed.ownIndex + 16] = {...otherInbreed,inbreedPairId:inbreedPairId};
+                  };
                 }
               }
 
               // 判定を行わないための上書きする（種牡馬）
-              for (const overWriteIndex of overWriteQue) {
-                stallionsArray[overWriteIndex].selectedHorse = horse.name;
-                // stallionsArray[overWriteIndex] = {...stallionsArray[overWriteIndex],selectedHorse1:tmpAllBrotherInbreedArray[0].name}
-              }
+              // for (const overWriteIndex of overWriteQue) {
+              //   stallionsArray[overWriteIndex].selectedHorse = horse.name;
+              //   // stallionsArray[overWriteIndex] = {...stallionsArray[overWriteIndex],selectedHorse1:tmpAllBrotherInbreedArray[0].name}
+              // }
               // 判定を行わないための上書きする（繁殖牝馬）
-              for (const overWriteIndex of overWriteQueMare) {
-                broodmaresArray[overWriteIndex].selectedHorse = horse.name;
-                // stallionsArray[overWriteIndex] = {...stallionsArray[overWriteIndex],selectedHorse1:tmpAllBrotherInbreedArray[0].name}
-              }
+              // for (const overWriteIndex of overWriteQueMare) {
+              //   broodmaresArray[overWriteIndex].selectedHorse = horse.name;
+              //   // stallionsArray[overWriteIndex] = {...stallionsArray[overWriteIndex],selectedHorse1:tmpAllBrotherInbreedArray[0].name}
+              // }
 
               overWriteQue = [];
-              // 自分側でクロスした先祖が他にもいないのか確認する
+
+              // 自分側で全兄弟クロスした先祖が他にもいないのか確認する
               // const otherInbreedArray = stallionsArray.filter(stallion => (stallion.name === horse.name && stallion.ownIndex !== horse.ownIndex));
-              const otherInbreedArray = stallionsArray.filter((stallion) =>
+              const otherfullBrothersInbreedArray = stallionsArray.filter((stallion) =>
                 stallion.fullBrothers.some(
                   (value) =>
                     value === horse.name && stallion.ownIndex !== horse.ownIndex
                 )
               );
+              for (const otherInbreed of otherfullBrothersInbreedArray) {
+                // 自分側でほかのとこのインブリード配列にセットする
+                if (!checkResultInbreed[otherInbreed.ownIndex]) {
+                  checkResultInbreed[otherInbreed.ownIndex] = {...otherInbreed,inbreedPairId:inbreedPairId};
+                }
+                // // インブリードがある場合
+                // // 種牡馬のキューを取得する
+                // const tmpOverWriteQue = [
+                //   ...overWriteQue,
+                //   this.getCellIdQue(otherInbreed.ownIndex, stallionsArray),
+                // ];
+                // overWriteQue = tmpOverWriteQue.flat(1);
+
+                // // 判定を行わないための上書きする（種牡馬）
+                // for (const overWriteIndex of overWriteQue) {
+                //   stallionsArray[overWriteIndex].selectedHorse = horse.name;
+                // }
+              };
+
+              // 自分側で同じ名前でクロスした先祖が他にもいないのか確認する
+              // const otherInbreedArray = stallionsArray.filter(stallion => (stallion.name === horse.name && stallion.ownIndex !== horse.ownIndex));
+              const otherInbreedArray = stallionsArray.filter(
+                (stallion) =>
+                  stallion.name === horse.name && stallion.ownIndex !== horse.ownIndex
+              );
               for (const otherInbreed of otherInbreedArray) {
                 // 自分側でほかのとこのインブリード配列にセットする
                 if (!checkResultInbreed[otherInbreed.ownIndex]) {
-                  checkResultInbreed[otherInbreed.ownIndex] = otherInbreed;
+                  checkResultInbreed[otherInbreed.ownIndex] = {...otherInbreed,inbreedPairId:inbreedPairId};
                 }
-                // インブリードがある場合
-                // 種牡馬のキューを取得する
-                const tmpOverWriteQue = [
-                  ...overWriteQue,
-                  this.getCellIdQue(otherInbreed.ownIndex, stallionsArray),
-                ];
-                overWriteQue = tmpOverWriteQue.flat(1);
+                // // インブリードがある場合
+                // // 種牡馬のキューを取得する
+                // const tmpOverWriteQue = [
+                //   ...overWriteQue,
+                //   this.getCellIdQue(otherInbreed.ownIndex, stallionsArray),
+                // ];
+                // overWriteQue = tmpOverWriteQue.flat(1);
 
-                // 判定を行わないための上書きする（種牡馬）
-                for (const overWriteIndex of overWriteQue) {
-                  stallionsArray[overWriteIndex].selectedHorse = horse.name;
-                }
-              }
+                // // 判定を行わないための上書きする（種牡馬）
+                // for (const overWriteIndex of overWriteQue) {
+                //   stallionsArray[overWriteIndex].selectedHorse = horse.name;
+                // }
+              };
+
               // 自分でクロスしたとこのインブリード配列にセットする
-              checkResultInbreed[horse.ownIndex] = horse;
+              if (!checkResultInbreed[horse.ownIndex]) {
+                checkResultInbreed[horse.ownIndex] = {...horse,inbreedPairId:inbreedPairId};
+                // 父の息子を全兄弟のほうに入れ替える
+                stallionsArray[horse.ownIndex * 2] = {...horse,childName:tmpAllBrotherInbreedArray[0].name}
+
+              };
             }
 
             overWriteQue = [];
@@ -3469,24 +3599,25 @@
             );
 
             if (tmpInbreedArray.length > 0) {
+              const inbreedPairId = crypto.randomUUID();
               for (const tmpInbreed of tmpInbreedArray) {
                 // インブリードがある場合
                 // 種牡馬のキューを取得する
-                const tmpOverWriteQue = [
-                  ...overWriteQue,
-                  this.getCellIdQue(horse.ownIndex, stallionsArray),
-                ];
-                overWriteQue = tmpOverWriteQue.flat(1);
+                // const tmpOverWriteQue = [
+                //   ...overWriteQue,
+                //   this.getCellIdQue(horse.ownIndex, stallionsArray),
+                // ];
+                // overWriteQue = tmpOverWriteQue.flat(1);
 
                 // 繫殖牝馬のキューを取得する
-                const tmpOverWriteQueMare = [
-                  ...overWriteQueMare,
-                  this.getCellIdQue(tmpInbreed.ownIndex, broodmaresArray),
-                ];
-                overWriteQueMare = tmpOverWriteQueMare.flat(1);
+                // const tmpOverWriteQueMare = [
+                //   ...overWriteQueMare,
+                //   this.getCellIdQue(tmpInbreed.ownIndex, broodmaresArray),
+                // ];
+                // overWriteQueMare = tmpOverWriteQueMare.flat(1);
 
                 // 相手側のインブリード配列にセットする
-                checkResultInbreed[tmpInbreed.ownIndex + 16] = tmpInbreed;
+                checkResultInbreed[tmpInbreed.ownIndex + 16] = {...tmpInbreed,inbreedPairId:inbreedPairId};
 
                 // 相手側でクロスした先祖が他にもいないのか確認してセットする
                 const otherInbreedArray = broodmaresArray.filter(
@@ -3495,18 +3626,18 @@
                     broodmare.ownIndex !== tmpInbreed.ownIndex
                 );
                 for (const otherInbreed of otherInbreedArray) {
-                  checkResultInbreed[otherInbreed.ownIndex + 16] = otherInbreed;
+                  checkResultInbreed[otherInbreed.ownIndex + 16] = {...otherInbreed,inbreedPairId:inbreedPairId};
                 }
               }
 
               // 判定を行わないための上書きする（種牡馬）
-              for (const overWriteIndex of overWriteQue) {
-                stallionsArray[overWriteIndex].selectedHorse = horse.name;
-              }
+              // for (const overWriteIndex of overWriteQue) {
+              //   stallionsArray[overWriteIndex].selectedHorse = horse.name;
+              // }
               // 判定を行わないための上書きする（繁殖牝馬）
-              for (const overWriteIndex of overWriteQueMare) {
-                broodmaresArray[overWriteIndex].selectedHorse = horse.name;
-              }
+              // for (const overWriteIndex of overWriteQueMare) {
+              //   broodmaresArray[overWriteIndex].selectedHorse = horse.name;
+              // }
 
               // 自分側でクロスした先祖が他にもいないのか確認する
               const otherInbreedArray = stallionsArray.filter(
@@ -3516,10 +3647,10 @@
               );
               for (const otherInbreed of otherInbreedArray) {
                 // 自分側でほかのとこのインブリード配列にセットする
-                checkResultInbreed[otherInbreed.ownIndex] = otherInbreed;
+                checkResultInbreed[otherInbreed.ownIndex] = {...otherInbreed,inbreedPairId:inbreedPairId};
               }
               // 自分でクロスしたとこのインブリード配列にセットする
-              checkResultInbreed[horse.ownIndex] = horse;
+              checkResultInbreed[horse.ownIndex] = {...horse,inbreedPairId:inbreedPairId};
             }
 
             i++;
@@ -3529,18 +3660,33 @@
           // 表示する色を初期化
           this.dispColor = Array.from(new Array(32).fill(""));
 
-          // 数字と(で始まる
-          // const excludeString = /^$|^\d*$|^\(.+?\)/
+          // ペアごとに分ける
+          // nullの要素を捨てる
+          const checkResultInbreedNotNull = checkResultInbreed.filter(item => item !== null);
+          // インブリードIDごとでグループ化する
+          const groupedByInbreedPairId = checkResultInbreedNotNull.reduce((acc, obj) => {
+            acc[obj.inbreedPairId] = acc[obj.inbreedPairId] || [];
+            acc[obj.inbreedPairId].push(obj);
+            return acc;
+          },{});
+          // 同じIDを持つペアを抽出
+          const duplicates = Object.values(groupedByInbreedPairId).filter(group => group.length > 0);
+          // グループ化した中で、childNameがすべて同じ かつ selfSelected がすべてfalseを除外する
+          const filteredData = duplicates.map((group) => {
+            const uniqueChildNames = new Set(group.map((item) => item.childName));
+            return uniqueChildNames.size === 1 &&
+              group.every((item) => item.selfSelected === false)
+              ? []
+              : group;
+          });
+          // 各要素の中にあるキーがindexの値をフラットにする
+          const indexes = filteredData.flatMap((group) =>
+            group.map((item) => item.index)
+          );
           let inbreedArray = 0;
-          checkResultInbreed.map((value, loopIndex) => {
-            if (value) {
-              if (value?.toRed != false) {
-                // 該当する箇所を赤くする
-                this.dispColor[loopIndex] = "inbreed";
-              }
-              // インブリード発生数をカウントアップ
-              inbreedArray++;
-            }
+          indexes.forEach(element => {
+            this.dispColor[element] = "inbreed";
+            inbreedArray++;
           });
 
           // インブリード発生数を返す
@@ -3714,16 +3860,24 @@
           return factorNumtoString;
         },
 
+        // Keyに該当する項目を取得する
+        getValueByKey : function (data,name) {
+          return data.filter(obj => obj.key === name).map(obj => obj.bros);
+        },
         // カウントした子系統数を画面に表示させる
         dispCategoryCount: function () {
           const allSet = this.selected.every((e) => e) ? 0 : -1;
           return (new Set(this.category).size + allSet).toString();
         },
+        // 配列を入れ替えたデータをセットする共通関数
+
+
         //血統表に埋めるために配列を入れ替える
         setDataForPedigree: function (sex, id, horseData) {
           const retDataForPedigree = Array.from(new Array(16).fill(null));
 
           if (horseData) {
+            let bros;
             const myId = crypto.randomUUID();
             // リストで選択した性別（種牡馬 or 繁殖牝馬）をセット
             this.selectedSex = horseData.sex;
@@ -3731,12 +3885,30 @@
             if (horseData.sex === "0" || (horseData.sex === "1" && id === 0)) {
               //牡馬を選択した場合 か 牝馬でも赤いところで牝馬を選択した場合
               // 0番目はデータそのものをセットする
+              // retDataForPedigree[0] = {
+              //   ...horseData,
+              //   selectedHorse: horseData.name,
+              //   uuid: myId,
+              // };
+              bros = this.getValueByKey(this.brosData, horseData.name);
               retDataForPedigree[0] = {
                 ...horseData,
                 selectedHorse: horseData.name,
                 uuid: myId,
+                selfSelected: true,
+                fullBrothers:
+                  bros.length != 0
+                    ? bros[0].fullBrothers
+                    : ["",""],
+                fullSisters:
+                  bros.length != 0
+                    ? bros[0].fullSisters
+                    : ["",""],
+                childName: null,
               };
+
               // 0番目以降は祖全データ＋subName''＋使用不可フラグを設定（因子配列も念のためコピー）
+              bros = this.getValueByKey(this.brosData, horseData.descendants[0].name);
               retDataForPedigree[1] = {
                 ...horseData.descendants[0],
                 subName: "",
@@ -3747,7 +3919,19 @@
                     ? horseData.name
                     : horseData.descendants[0].name,
                 uuid: myId,
+                selfSelected: false,
+                fullBrothers:
+                  bros.length != 0
+                    ? bros[0].fullBrothers
+                    : ["",""],
+                fullSisters:
+                  bros.length != 0
+                    ? bros[0].fullSisters
+                    : ["",""],
+                childName: horseData.name,
               };
+
+              bros = this.getValueByKey(this.brosData, horseData.descendants[1].name);
               retDataForPedigree[2] = {
                 ...horseData.descendants[1],
                 subName: "",
@@ -3758,7 +3942,19 @@
                     ? horseData.name
                     : horseData.descendants[0].name,
                 uuid: myId,
+                selfSelected: false,
+                fullBrothers:
+                  bros.length != 0
+                    ? bros[0].fullBrothers
+                    : ["",""],
+                fullSisters:
+                  bros.length != 0
+                    ? bros[0].fullSisters
+                    : ["",""],
+                childName: horseData.descendants[0].name,
               };
+
+              bros = this.getValueByKey(this.brosData, horseData.descendants[8].name);
               retDataForPedigree[3] = {
                 ...horseData.descendants[8],
                 subName: "",
@@ -3769,7 +3965,19 @@
                     ? horseData.name
                     : horseData.descendants[8].name,
                 uuid: myId,
+                selfSelected: false,
+                fullBrothers:
+                  bros.length != 0
+                    ? bros[0].fullBrothers
+                    : ["",""],
+                fullSisters:
+                  bros.length != 0
+                    ? bros[0].fullSisters
+                    : ["",""],
+                childName: null,
               };
+
+              bros = this.getValueByKey(this.brosData, horseData.descendants[2].name);
               retDataForPedigree[4] = {
                 ...horseData.descendants[2],
                 subName: "",
@@ -3780,7 +3988,19 @@
                     ? horseData.name
                     : horseData.descendants[0].name,
                 uuid: myId,
+                selfSelected: false,
+                fullBrothers:
+                  bros.length != 0
+                    ? bros[0].fullBrothers
+                    : ["",""],
+                fullSisters:
+                  bros.length != 0
+                    ? bros[0].fullSisters
+                    : ["",""],
+                childName: horseData.descendants[1].name,
               };
+
+              bros = this.getValueByKey(this.brosData, horseData.descendants[5].name);
               retDataForPedigree[5] = {
                 ...horseData.descendants[5],
                 subName: "",
@@ -3791,7 +4011,19 @@
                     ? horseData.name
                     : horseData.descendants[0].name,
                 uuid: myId,
+                selfSelected: false,
+                fullBrothers:
+                  bros.length != 0
+                    ? bros[0].fullBrothers
+                    : ["",""],
+                fullSisters:
+                  bros.length != 0
+                    ? bros[0].fullSisters
+                    : ["",""],
+                childName: null,
               };
+
+              bros = this.getValueByKey(this.brosData, horseData.descendants[9].name);
               retDataForPedigree[6] = {
                 ...horseData.descendants[9],
                 subName: "",
@@ -3802,7 +4034,19 @@
                     ? horseData.name
                     : horseData.descendants[8].name,
                 uuid: myId,
+                selfSelected: false,
+                fullBrothers:
+                  bros.length != 0
+                    ? bros[0].fullBrothers
+                    : ["",""],
+                fullSisters:
+                  bros.length != 0
+                    ? bros[0].fullSisters
+                    : ["",""],
+                childName: horseData.descendants[8].name,
               };
+
+              bros = this.getValueByKey(this.brosData, horseData.descendants[12].name);
               retDataForPedigree[7] = {
                 ...horseData.descendants[12],
                 subName: "",
@@ -3813,7 +4057,19 @@
                     ? horseData.name
                     : horseData.descendants[12].name,
                 uuid: myId,
+                selfSelected: false,
+                fullBrothers:
+                  bros.length != 0
+                    ? bros[0].fullBrothers
+                    : ["",""],
+                fullSisters:
+                  bros.length != 0
+                    ? bros[0].fullSisters
+                    : ["",""],
+                childName: null,
               };
+
+              bros = this.getValueByKey(this.brosData, horseData.descendants[3].name);
               retDataForPedigree[8] = {
                 ...horseData.descendants[3],
                 subName: "",
@@ -3824,7 +4080,19 @@
                     ? horseData.name
                     : horseData.descendants[0].name,
                 uuid: myId,
+                selfSelected: false,
+                fullBrothers:
+                  bros.length != 0
+                    ? bros[0].fullBrothers
+                    : ["",""],
+                fullSisters:
+                  bros.length != 0
+                    ? bros[0].fullSisters
+                    : ["",""],
+                childName: horseData.descendants[2].name,
               };
+
+              bros = this.getValueByKey(this.brosData, horseData.descendants[4].name);
               retDataForPedigree[9] = {
                 ...horseData.descendants[4],
                 subName: "",
@@ -3835,7 +4103,19 @@
                     ? horseData.name
                     : horseData.descendants[0].name,
                 uuid: myId,
+                selfSelected: false,
+                fullBrothers:
+                  bros.length != 0
+                    ? bros[0].fullBrothers
+                    : ["",""],
+                fullSisters:
+                  bros.length != 0
+                    ? bros[0].fullSisters
+                    : ["",""],
+                childName: null,
               };
+
+              bros = this.getValueByKey(this.brosData, horseData.descendants[6].name);
               retDataForPedigree[10] = {
                 ...horseData.descendants[6],
                 subName: "",
@@ -3846,7 +4126,19 @@
                     ? horseData.name
                     : horseData.descendants[0].name,
                 uuid: myId,
+                selfSelected: false,
+                fullBrothers:
+                  bros.length != 0
+                    ? bros[0].fullBrothers
+                    : ["",""],
+                fullSisters:
+                  bros.length != 0
+                    ? bros[0].fullSisters
+                    : ["",""],
+                childName: horseData.descendants[5].name,
               };
+
+              bros = this.getValueByKey(this.brosData, horseData.descendants[7].name);
               retDataForPedigree[11] = {
                 ...horseData.descendants[7],
                 subName: "",
@@ -3857,7 +4149,19 @@
                     ? horseData.name
                     : horseData.descendants[0].name,
                 uuid: myId,
+                selfSelected: false,
+                fullBrothers:
+                  bros.length != 0
+                    ? bros[0].fullBrothers
+                    : ["",""],
+                fullSisters:
+                  bros.length != 0
+                    ? bros[0].fullSisters
+                    : ["",""],
+                childName: null,
               };
+
+              bros = this.getValueByKey(this.brosData, horseData.descendants[10].name);
               retDataForPedigree[12] = {
                 ...horseData.descendants[10],
                 subName: "",
@@ -3868,7 +4172,19 @@
                     ? horseData.name
                     : horseData.descendants[8].name,
                 uuid: myId,
+                selfSelected: false,
+                fullBrothers:
+                  bros.length != 0
+                    ? bros[0].fullBrothers
+                    : ["",""],
+                fullSisters:
+                  bros.length != 0
+                    ? bros[0].fullSisters
+                    : ["",""],
+                childName: horseData.descendants[9].name,
               };
+
+              bros = this.getValueByKey(this.brosData, horseData.descendants[11].name);
               retDataForPedigree[13] = {
                 ...horseData.descendants[11],
                 subName: "",
@@ -3879,7 +4195,19 @@
                     ? horseData.name
                     : horseData.descendants[8].name,
                 uuid: myId,
+                selfSelected: false,
+                fullBrothers:
+                  bros.length != 0
+                    ? bros[0].fullBrothers
+                    : ["",""],
+                fullSisters:
+                  bros.length != 0
+                    ? bros[0].fullSisters
+                    : ["",""],
+                childName: null,
               };
+
+              bros = this.getValueByKey(this.brosData, horseData.descendants[13].name);
               retDataForPedigree[14] = {
                 ...horseData.descendants[13],
                 subName: "",
@@ -3890,7 +4218,19 @@
                     ? horseData.name
                     : horseData.descendants[12].name,
                 uuid: myId,
+                selfSelected: false,
+                fullBrothers:
+                  bros.length != 0
+                    ? bros[0].fullBrothers
+                    : ["",""],
+                fullSisters:
+                  bros.length != 0
+                    ? bros[0].fullSisters
+                    : ["",""],
+                childName: horseData.descendants[12].name,
               };
+
+              bros = this.getValueByKey(this.brosData, horseData.descendants[14].name);
               retDataForPedigree[15] = {
                 ...horseData.descendants[14],
                 subName: "",
@@ -3901,9 +4241,20 @@
                     ? horseData.name
                     : horseData.descendants[14].name,
                 uuid: myId,
+                selfSelected: false,
+                fullBrothers:
+                  bros.length != 0
+                    ? bros[0].fullBrothers
+                    : ["",""],
+                fullSisters:
+                  bros.length != 0
+                    ? bros[0].fullSisters
+                    : ["",""],
+                childName: null,
               };
             } else {
               //牝馬を選択した場合
+              bros = this.getValueByKey(this.brosData, horseData.descendants[0].name);
               retDataForPedigree[0] = {
                 ...horseData.descendants[0],
                 subName: `(${horseData.name})`,
@@ -3911,7 +4262,18 @@
                 disabled: true,
                 selectedHorse: horseData.descendants[0].name,
                 uuid: myId,
+                selfSelected: false,
+                fullBrothers:
+                  bros.length != 0
+                    ? bros[0].fullBrothers
+                    : ["",""],
+                fullSisters:
+                  bros.length != 0
+                    ? bros[0].fullSisters
+                    : ["",""]
               };
+
+              bros = this.getValueByKey(this.brosData, horseData.descendants[1].name);
               retDataForPedigree[1] = {
                 ...horseData.descendants[1],
                 subName: `(${horseData.name})`,
@@ -3919,7 +4281,18 @@
                 disabled: true,
                 selectedHorse: horseData.descendants[0].name,
                 uuid: myId,
+                selfSelected: false,
+                fullBrothers:
+                  bros.length != 0
+                    ? bros[0].fullBrothers
+                    : ["",""],
+                fullSisters:
+                  bros.length != 0
+                    ? bros[0].fullSisters
+                    : ["",""]
               };
+
+              bros = this.getValueByKey(this.brosData, horseData.descendants[8].name);
               retDataForPedigree[2] = {
                 ...horseData.descendants[8],
                 subName: `(${horseData.name})`,
@@ -3927,7 +4300,18 @@
                 disabled: true,
                 selectedHorse: horseData.descendants[8].name,
                 uuid: myId,
+                selfSelected: false,
+                fullBrothers:
+                  bros.length != 0
+                    ? bros[0].fullBrothers
+                    : ["",""],
+                fullSisters:
+                  bros.length != 0
+                    ? bros[0].fullSisters
+                    : ["",""]
               };
+
+              bros = this.getValueByKey(this.brosData, horseData.descendants[2].name);
               retDataForPedigree[3] = {
                 ...horseData.descendants[2],
                 subName: `(${horseData.name})`,
@@ -3935,7 +4319,18 @@
                 disabled: true,
                 selectedHorse: horseData.descendants[0].name,
                 uuid: myId,
+                selfSelected: false,
+                fullBrothers:
+                  bros.length != 0
+                    ? bros[0].fullBrothers
+                    : ["",""],
+                fullSisters:
+                  bros.length != 0
+                    ? bros[0].fullSisters
+                    : ["",""]
               };
+
+              bros = this.getValueByKey(this.brosData, horseData.descendants[5].name);
               retDataForPedigree[4] = {
                 ...horseData.descendants[5],
                 subName: `(${horseData.name})`,
@@ -3943,7 +4338,18 @@
                 disabled: true,
                 selectedHorse: horseData.descendants[0].name,
                 uuid: myId,
+                selfSelected: false,
+                fullBrothers:
+                  bros.length != 0
+                    ? bros[0].fullBrothers
+                    : ["",""],
+                fullSisters:
+                  bros.length != 0
+                    ? bros[0].fullSisters
+                    : ["",""]
               };
+
+              bros = this.getValueByKey(this.brosData, horseData.descendants[9].name);
               retDataForPedigree[5] = {
                 ...horseData.descendants[9],
                 subName: `(${horseData.name})`,
@@ -3951,7 +4357,18 @@
                 disabled: true,
                 selectedHorse: horseData.descendants[8].name,
                 uuid: myId,
+                selfSelected: false,
+                fullBrothers:
+                  bros.length != 0
+                    ? bros[0].fullBrothers
+                    : ["",""],
+                fullSisters:
+                  bros.length != 0
+                    ? bros[0].fullSisters
+                    : ["",""]
               };
+
+              bros = this.getValueByKey(this.brosData, horseData.descendants[12].name);
               retDataForPedigree[6] = {
                 ...horseData.descendants[12],
                 subName: `(${horseData.name})`,
@@ -3959,7 +4376,18 @@
                 disabled: true,
                 selectedHorse: horseData.descendants[12].name,
                 uuid: myId,
+                selfSelected: false,
+                fullBrothers:
+                  bros.length != 0
+                    ? bros[0].fullBrothers
+                    : ["",""],
+                fullSisters:
+                  bros.length != 0
+                    ? bros[0].fullSisters
+                    : ["",""]
               };
+
+              bros = this.getValueByKey(this.brosData, horseData.descendants[3].name);
               retDataForPedigree[7] = {
                 ...horseData.descendants[3],
                 subName: `(${horseData.name})`,
@@ -3967,7 +4395,18 @@
                 disabled: true,
                 selectedHorse: horseData.descendants[0].name,
                 uuid: myId,
+                selfSelected: false,
+                fullBrothers:
+                  bros.length != 0
+                    ? bros[0].fullBrothers
+                    : ["",""],
+                fullSisters:
+                  bros.length != 0
+                    ? bros[0].fullSisters
+                    : ["",""]
               };
+
+              bros = this.getValueByKey(this.brosData, horseData.descendants[4].name);
               retDataForPedigree[8] = {
                 ...horseData.descendants[4],
                 subName: `(${horseData.name})`,
@@ -3975,15 +4414,36 @@
                 disabled: true,
                 selectedHorse: horseData.descendants[0].name,
                 uuid: myId,
+                selfSelected: false,
+                fullBrothers:
+                  bros.length != 0
+                    ? bros[0].fullBrothers
+                    : ["",""],
+                fullSisters:
+                  bros.length != 0
+                    ? bros[0].fullSisters
+                    : ["",""]
               };
+
+              bros = this.getValueByKey(this.brosData, horseData.descendants[6].name);
               retDataForPedigree[9] = {
                 ...horseData.descendants[6],
                 subName: `(${horseData.name})`,
                 factors: [...horseData.descendants[6].factors],
                 disabled: true,
                 selectedHorse: horseData.descendants[0].name,
-                uuid: myId,
+                selfSelected: false,
+                fullBrothers:
+                  bros.length != 0
+                    ? bros[0].fullBrothers
+                    : ["",""],
+                fullSisters:
+                  bros.length != 0
+                    ? bros[0].fullSisters
+                    : ["",""]
               };
+
+              bros = this.getValueByKey(this.brosData, horseData.descendants[7].name);
               retDataForPedigree[10] = {
                 ...horseData.descendants[7],
                 subName: `(${horseData.name})`,
@@ -3991,7 +4451,18 @@
                 disabled: true,
                 selectedHorse: horseData.descendants[0].name,
                 uuid: myId,
+                selfSelected: false,
+                fullBrothers:
+                  bros.length != 0
+                    ? bros[0].fullBrothers
+                    : ["",""],
+                fullSisters:
+                  bros.length != 0
+                    ? bros[0].fullSisters
+                    : ["",""]
               };
+
+              bros = this.getValueByKey(this.brosData, horseData.descendants[10].name);
               retDataForPedigree[11] = {
                 ...horseData.descendants[10],
                 subName: `(${horseData.name})`,
@@ -3999,7 +4470,18 @@
                 disabled: true,
                 selectedHorse: horseData.descendants[8].name,
                 uuid: myId,
+                selfSelected: false,
+                fullBrothers:
+                  bros.length != 0
+                    ? bros[0].fullBrothers
+                    : ["",""],
+                fullSisters:
+                  bros.length != 0
+                    ? bros[0].fullSisters
+                    : ["",""]
               };
+
+              bros = this.getValueByKey(this.brosData, horseData.descendants[11].name);
               retDataForPedigree[12] = {
                 ...horseData.descendants[11],
                 subName: `(${horseData.name})`,
@@ -4007,7 +4489,18 @@
                 disabled: true,
                 selectedHorse: horseData.descendants[8].name,
                 uuid: myId,
+                selfSelected: false,
+                fullBrothers:
+                  bros.length != 0
+                    ? bros[0].fullBrothers
+                    : ["",""],
+                fullSisters:
+                  bros.length != 0
+                    ? bros[0].fullSisters
+                    : ["",""]
               };
+
+              bros = this.getValueByKey(this.brosData, horseData.descendants[13].name);
               retDataForPedigree[13] = {
                 ...horseData.descendants[13],
                 subName: `(${horseData.name})`,
@@ -4015,7 +4508,18 @@
                 disabled: true,
                 selectedHorse: horseData.descendants[12].name,
                 uuid: myId,
+                selfSelected: false,
+                fullBrothers:
+                  bros.length != 0
+                    ? bros[0].fullBrothers
+                    : ["",""],
+                fullSisters:
+                  bros.length != 0
+                    ? bros[0].fullSisters
+                    : ["",""]
               };
+
+              bros = this.getValueByKey(this.brosData, horseData.descendants[14].name);
               retDataForPedigree[14] = {
                 ...horseData.descendants[14],
                 subName: `(${horseData.name})`,
@@ -4023,6 +4527,15 @@
                 disabled: true,
                 selectedHorse: horseData.descendants[14].name,
                 uuid: myId,
+                selfSelected: false,
+                fullBrothers:
+                  bros.length != 0
+                    ? bros[0].fullBrothers
+                    : ["",""],
+                fullSisters:
+                  bros.length != 0
+                    ? bros[0].fullSisters
+                    : ["",""]
               };
               retDataForPedigree[15] = "broodmares";
             }
